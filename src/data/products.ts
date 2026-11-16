@@ -413,7 +413,7 @@ export const PRODUCTS: Product[] = [
     version: 'Institutional Legal Edition',
     folder: '03-clientforge-kit',
     badge: '3 Legal Word Contracts',
-    rating: 3.8,
+    rating: 3.9,
     reviewsCount: 19,
     techStack: ['Microsoft Word (.docx)', 'Legal Contract Frameworks', 'B2B Sales Psychology', 'Outreach Matrices'],
     deliverables: [
@@ -462,7 +462,7 @@ export const PRODUCTS: Product[] = [
     version: 'v1.0 (Next.js 15.1.7)',
     folder: '10-multilaunch-ai',
     badge: 'Multi-Model Architecture',
-    rating: 4.8,
+    rating: 4.3,
     reviewsCount: 34,
     techStack: ['Next.js 15.1.7 (App Router)', 'React 19', 'TypeScript', 'Tailwind CSS', 'Google Gemini 2.0 Flash', 'Claude 3.5 Sonnet', 'OpenAI GPT-4o', 'DeepSeek V3'],
     deliverables: [
@@ -512,7 +512,7 @@ export const PRODUCTS: Product[] = [
     version: 'v1.0 (MCP SDK 1.5.0)',
     folder: '11-mcpforge-enterprise',
     badge: 'Certified Claude & Cursor',
-    rating: 4.7,
+    rating: 4.4,
     reviewsCount: 28,
     techStack: ['TypeScript 5.7', 'Node.js', '@modelcontextprotocol/sdk', 'Zod', 'Claude Desktop', 'Cursor IDE', 'Antigravity'],
     deliverables: [
@@ -562,7 +562,7 @@ export const PRODUCTS: Product[] = [
     version: '2026 Cloud Blueprints Edition',
     folder: '12-stackforge-docker',
     badge: 'Saves +/Mo',
-    rating: 4.9,
+    rating: 4.2,
     reviewsCount: 37,
     techStack: ['Docker Compose 26+', 'Caddy 2.8 (Auto-SSL)', 'PostgreSQL 16', 'Redis 7.2', 'n8n Automation', 'Open WebUI', 'Hetzner / DigitalOcean / Ubuntu'],
     deliverables: [
