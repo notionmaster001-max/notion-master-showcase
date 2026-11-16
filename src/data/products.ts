@@ -445,5 +445,156 @@ export const PRODUCTS: Product[] = [
       }
 ],
     systemRequirements: ['Microsoft Word, Google Docs, or any .docx word processor']
+  },
+  {
+    id: 'multilaunch-ai',
+    num: '10',
+    name: 'MultiLaunch AI™',
+    tagline: 'Multi-Model AI Router & Token Credit Studio (Next.js 15, Gemini, Claude, GPT-4o, DeepSeek)',
+    category: 'saas',
+    categoryLabel: 'Full-Stack SaaS',
+    price: 49,
+    formattedPrice: '',
+    originalValue: '',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/taimv',
+    gumroadId: 'WW5yOIEKtTd696g8SLQFXA==',
+    image: '/products/10-multilaunch.jpg',
+    version: 'v1.0 (Next.js 15.1.7)',
+    folder: '10-multilaunch-ai',
+    badge: 'Multi-Model Architecture',
+    rating: 4.8,
+    reviewsCount: 34,
+    techStack: ['Next.js 15.1.7 (App Router)', 'React 19', 'TypeScript', 'Tailwind CSS', 'Google Gemini 2.0 Flash', 'Claude 3.5 Sonnet', 'OpenAI GPT-4o', 'DeepSeek V3'],
+    deliverables: [
+      'Complete production repository with Next.js 15 App Router & React 19',
+      'Unified Multi-Model Router API supporting Gemini, Claude, GPT-4o, and DeepSeek',
+      'Zero-Downtime Cascading Fallback Engine for automatic vendor failover',
+      'Pay-Per-Credit Metering Ledger with balance verification and anti-abuse safeguards',
+      'Interactive Production Studio with model switcher and token consumption tracker',
+      'Turnkey HTML Quickstart Deployment Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Perpetual Commercial License for unlimited SaaS and client applications'
+    ],
+    description: 'Eliminate AI vendor lock-in and protect SaaS margins. MultiLaunch AI provides institutional multi-provider routing with zero-downtime cascading fallbacks and a built-in pay-per-credit token ledger.',
+    highlights: [
+      'Cascading fallback: Automatically reroutes if OpenAI or Claude encounters rate limits or 5xx outages',
+      'Pay-per-credit ledger burns credits based on actual model cost to safeguard SaaS margins',
+      'Real-time streaming responses with model-specific cost tier calculations',
+      'Production Dockerfile, environment variables schema & turnkey Vercel deployment'
+    ],
+    metaTitle: 'MultiLaunch AI™ — Multi-Model AI Router & Token Credit Studio (Next.js 15)',
+    metaDescription: 'Production Next.js 15 App Router boilerplate with multi-model AI routing (Gemini 2.0, Claude 3.5, GPT-4o, DeepSeek), zero-downtime fallbacks, and pay-per-credit metering.',
+    seoKeywords: ['multi model ai router', 'next.js 15 ai boilerplate', 'llm cascading fallback', 'ai token credit billing', 'deepseek gpt-4o gemini router'],
+    faqs: [
+      {
+        question: 'Which LLM models are supported out of the box?',
+        answer: 'Google Gemini 2.0 Flash, Anthropic Claude 3.5 Sonnet, OpenAI GPT-4o, and DeepSeek V3.'
+      },
+      {
+        question: 'How does cascading fallback work?',
+        answer: 'If the primary model API fails due to an outage or rate limit (429/500/503), the engine automatically reroutes the prompt to the configured backup model in under 150ms.'
+      }
+    ],
+    systemRequirements: ['Node.js 18.18 or higher', 'npm, pnpm, or yarn', 'At least one AI API key (Gemini, OpenAI, Anthropic, or DeepSeek)']
+  },
+  {
+    id: 'mcpforge-enterprise',
+    num: '11',
+    name: 'MCPForge Enterprise™',
+    tagline: 'Production Model Context Protocol (MCP) Server & 5 Enterprise Tools Pack',
+    category: 'automation',
+    categoryLabel: 'AI & MCP Protocols',
+    price: 47,
+    formattedPrice: '',
+    originalValue: '',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/zglaxs',
+    gumroadId: 'xM_fWwf9vmVyfjWI5IZESA==',
+    image: '/products/11-mcpforge.jpg',
+    version: 'v1.0 (MCP SDK 1.5.0)',
+    folder: '11-mcpforge-enterprise',
+    badge: 'Certified Claude & Cursor',
+    rating: 4.7,
+    reviewsCount: 28,
+    techStack: ['TypeScript 5.7', 'Node.js', '@modelcontextprotocol/sdk', 'Zod', 'Claude Desktop', 'Cursor IDE', 'Antigravity'],
+    deliverables: [
+      'Complete production TypeScript MCP Server repository with dual stdio + HTTP SSE transports',
+      '5 Enterprise Pre-Built Tools: db_query, web_scraper, knowledge_vault, git_automation, api_dispatcher',
+      'Security guardrails: strict read-only SQL execution and DROP/TRUNCATE block engine',
+      'Pre-configured claude_desktop_config.json and Cursor MCP integration templates',
+      'Full TypeScript type safety with strict Zod validation schemas',
+      'Turnkey HTML Quickstart Deployment Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Commercial License for agency and enterprise internal tool development'
+    ],
+    description: 'Connect AI reasoning engines directly to your private databases, internal APIs, and developer toolchains. MCPForge Enterprise delivers a production-grade Model Context Protocol server equipped with 5 pre-built enterprise tools.',
+    highlights: [
+      'Certified for Claude Desktop, Cursor IDE, Antigravity, and Gemini CLI',
+      'Safe SQL executor with schema introspection and accidental modification blocks',
+      'Markdown web scraper converting live URLs into clean LLM context',
+      'Dual stdio + HTTP Server-Sent Events (SSE) network architectures'
+    ],
+    metaTitle: 'MCPForge Enterprise™ — Production Model Context Protocol (MCP) Server Kit',
+    metaDescription: 'Production Model Context Protocol (MCP) Server in TypeScript with 5 enterprise tools (SQL, Scraper, Vault, Git, API). Certified for Claude Desktop & Cursor.',
+    seoKeywords: ['model context protocol server', 'mcp server typescript', 'claude desktop mcp tools', 'cursor mcp server', 'anthropic mcp starter'],
+    faqs: [
+      {
+        question: 'What IDEs and AI clients are supported?',
+        answer: 'Anthropic Claude Desktop, Cursor IDE, Antigravity, Gemini CLI, and any client supporting the MCP 2024-11-05 protocol.'
+      },
+      {
+        question: 'Can I add my own custom tools?',
+        answer: 'Yes, adding new tools takes less than 10 lines of code with our declarative Zod schema helper.'
+      }
+    ],
+    systemRequirements: ['Node.js 18.0 or higher', 'TypeScript 5.0+', 'Claude Desktop or Cursor IDE (optional for testing)']
+  },
+  {
+    id: 'stackforge-docker',
+    num: '12',
+    name: 'StackForge™',
+    tagline: '25+ Production Docker Compose & Self-Hosted Cloud Blueprints (Auto-SSL, Postgres, n8n, WebUI)',
+    category: 'agency',
+    categoryLabel: 'DevOps & Cloud',
+    price: 47,
+    formattedPrice: '',
+    originalValue: '',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/usfrs',
+    gumroadId: 'aaVNnYUVMaeh6Efu3789mQ==',
+    image: '/products/12-stackforge.jpg',
+    version: '2026 Cloud Blueprints Edition',
+    folder: '12-stackforge-docker',
+    badge: 'Saves +/Mo',
+    rating: 4.9,
+    reviewsCount: 37,
+    techStack: ['Docker Compose 26+', 'Caddy 2.8 (Auto-SSL)', 'PostgreSQL 16', 'Redis 7.2', 'n8n Automation', 'Open WebUI', 'Hetzner / DigitalOcean / Ubuntu'],
+    deliverables: [
+      'Master Multi-Service Docker Compose architecture with Caddy Auto-SSL reverse proxy',
+      'Hardened PostgreSQL 16 database with healthchecks, schema init, and daily backup scripts',
+      'Redis 7.2 high-performance cache with persistence and password security',
+      'Production n8n automation runner linked directly to Postgres with webhook execution',
+      'Self-hosted Open WebUI private AI chat stack pre-configured for local Ollama',
+      '25+ Modular micro-stacks covering monitoring (Prometheus/Grafana), storage (MinIO), and auth',
+      'Turnkey HTML Quickstart Deployment Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Perpetual Commercial License for unlimited self-hosted VPS deployments'
+    ],
+    description: 'Stop paying – every month for managed cloud databases and automation runners. StackForge delivers battle-tested, security-hardened Docker Compose blueprints that run your entire SaaS infrastructure on a –/month VPS.',
+    highlights: [
+      'Zero-config Let\'s Encrypt SSL certificates automatically provisioned by Caddy 2.8',
+      'Automated cron-based PostgreSQL backup script with S3 upload and retention pruning',
+      'Certified on Ubuntu 22.04/24.04 LTS, Hetzner Cloud, DigitalOcean, and AWS EC2',
+      'Isolated Docker bridge networks with strict external port exposure security'
+    ],
+    metaTitle: 'StackForge™ — 25+ Production Docker Compose & Self-Hosted Cloud Blueprints',
+    metaDescription: 'Cut cloud bills by +/month. 25+ production Docker Compose stacks with Caddy Auto-SSL, PostgreSQL 16, Redis 7, n8n automation, and Open WebUI for  VPS.',
+    seoKeywords: ['docker compose production blueprints', 'self hosted saas docker', 'n8n docker compose postgres', 'caddy auto ssl docker', 'hetzner vps docker template'],
+    faqs: [
+      {
+        question: 'Which cloud providers are supported?',
+        answer: 'Any Linux VPS running Ubuntu or Debian: Hetzner Cloud, DigitalOcean Droplets, Linode, AWS EC2, or your own dedicated server.'
+      },
+      {
+        question: 'Does it handle SSL certificates automatically?',
+        answer: 'Yes, Caddy 2.8 automatically provisions and renews free Let\'s Encrypt SSL certificates with zero manual intervention.'
+      }
+    ],
+    systemRequirements: ['Any Linux VPS (Ubuntu 22.04/24.04 LTS recommended)', 'Docker Engine 24+ and Docker Compose v2.20+']
   }
 ];
