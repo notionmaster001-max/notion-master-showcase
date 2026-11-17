@@ -30,6 +30,7 @@ export default function Home() {
       agency: PRODUCTS.filter((p) => p.category === 'agency').length,
       growth: PRODUCTS.filter((p) => p.category === 'growth').length,
       bundle: PRODUCTS.filter((p) => p.category === 'bundle').length,
+      gaming: PRODUCTS.filter((p) => p.category === 'gaming').length,
     };
   }, []);
 

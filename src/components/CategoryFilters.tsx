@@ -18,6 +18,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
 }) => {
   const tabs: { key: CategoryFilter; label: string }[] = [
     { key: 'all', label: 'All Products' },
+    { key: 'gaming', label: 'GTA 6 & Creator Suite' },
     { key: 'saas', label: 'Full-Stack SaaS' },
     { key: 'automation', label: 'AI & Automations' },
     { key: 'agency', label: 'Operations & Legal' },

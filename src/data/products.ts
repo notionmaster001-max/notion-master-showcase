@@ -596,5 +596,307 @@ export const PRODUCTS: Product[] = [
       }
     ],
     systemRequirements: ['Any Linux VPS (Ubuntu 22.04/24.04 LTS recommended)', 'Docker Engine 24+ and Docker Compose v2.20+']
+  },
+  {
+    id: 'vice-city-companion',
+    num: '13',
+    name: 'Vice City 100% Master Companion™',
+    tagline: 'Dual-Screen Interactive 100% Quest & Collectibles OS (2026 Edition)',
+    category: 'gaming',
+    categoryLabel: 'Gaming & OS',
+    price: 15,
+    formattedPrice: '$14.99',
+    originalValue: '$49',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/ycnisr',
+    gumroadId: 'do9vHEsfwdCoM8n1VPlflA==',
+    image: '/products/13-vice-city-companion.jpg',
+    version: '2026 Console Launch Edition',
+    folder: '01-vice-city-companion',
+    badge: 'Console Launch OS',
+    rating: 4.4,
+    reviewsCount: 23,
+    techStack: ['HTML5 / Vanilla JS', 'Web Audio API Synth Chime', 'LocalStorage Auto-Sync', 'Responsive Dual-Screen PWA', 'Notion Relational Database Schema', '100% Offline Zero-Lag'],
+    deliverables: [
+      'Interactive 100% Tracking Web App (index.html, runs offline in any browser)',
+      '179 Master Database entries (69 Story Missions, 25 Strangers, 50 Collectibles, 15 Heists, 20 World Events)',
+      'Retro synth Web Audio completion chimes and instant live progress percentage calculation',
+      'One-click JSON progress backup export & instant cross-device restore',
+      'Notion Relational Database Blueprint (notion-template-guide.html / .md)',
+      'Comprehensive HTML Quickstart Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Single Creator Commercial License for personal streaming & gaming setups'
+    ],
+    description: 'Designed specifically for the November 19, 2026 console release. Place this zero-lag, interactive 100% completion checklist on your second monitor, iPad, tablet, or smartphone while playing on PS5 or Xbox Series X.',
+    highlights: [
+      'Zero external installations or dependencies — double-click and run in Chrome, Safari, or Edge',
+      'Save to Home Screen (PWA mode) for full-screen immersive tracking on iPhone or Android tablet',
+      'Instant search filter with Ctrl+K shortcut to locate any missable mission or weapon stash in seconds',
+      'Persistent LocalStorage memory keeps all your progress saved even when closing the browser'
+    ],
+    metaTitle: 'Vice City 100% Master Companion™ — Dual-Screen Interactive Quest & Collectibles OS',
+    metaDescription: 'Dual-screen 100% quest checklist and live progression tracker for GTA 6 console launch. 179 missions, collectibles, offline audio chimes, and Notion database.',
+    seoKeywords: ['gta 6 companion app', 'vice city 100 checklist', 'gta 6 collectibles tracker', 'notion gta 6 database', 'ps5 dual screen companion'],
+    faqs: [
+      {
+        question: 'Does this require an internet connection while playing?',
+        answer: 'No. The entire tracking engine runs 100% locally in your browser using client-side JavaScript and LocalStorage.'
+      },
+      {
+        question: 'Can I use this on my iPad or phone while gaming on console?',
+        answer: 'Yes! Simply open index.html in mobile Safari or Chrome and select "Add to Home Screen" for a full-screen native app experience.'
+      }
+    ],
+    systemRequirements: ['Any modern browser (Chrome, Safari, Edge, Firefox, Brave)', 'Optional 2nd monitor, tablet, or phone']
+  },
+  {
+    id: 'streamshield-vice',
+    num: '14',
+    name: 'StreamShield Vice™',
+    tagline: '100% DMCA-Safe Soundboard Engine & Twitch VOD Audio Splitter',
+    category: 'gaming',
+    categoryLabel: 'Audio & Streaming',
+    price: 25,
+    formattedPrice: '$24.99',
+    originalValue: '$69',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/mrqwpq',
+    gumroadId: 'TnmQ4JPqolWj_UG8PjNSJQ==',
+    image: '/products/14-streamshield-vice.jpg',
+    version: '2026 Broadcaster Edition',
+    folder: '02-streamshield-vice',
+    badge: 'DMCA-Safe Audio',
+    rating: 4.3,
+    reviewsCount: 31,
+    techStack: ['Web Audio API Procedural Synth', 'Dynamics Compressor Limiter (-12dB)', 'OBS Custom Browser Dock', 'Twitch VOD Track 2 Audio Separation', 'Numpad Hotkeys (1-8, ESC)'],
+    deliverables: [
+      'Standalone Web Audio soundboard engine (soundboard.html) with 8 synthesized SFX',
+      'Zero external MP3/WAV dependencies — audio is procedural, ensuring 100% DMCA immunity',
+      'Hardware dynamics compressor limiter (-12dB, 12:1 ratio) preventing stream clipping',
+      'Integrated real-time frequency spectrum visualizer canvas',
+      'Twitch VOD Track 2 Audio Routing Manual (obs-audio-routing-guide.html / .md)',
+      'Turnkey HTML Quickstart Deployment Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Single Broadcaster Commercial License for Twitch, YouTube, and Kick channels'
+    ],
+    description: 'Broadcast high-risk open-world games without fear of copyright strikes or muted VODs. StreamShield Vice generates 100% procedural synthesized audio cues in real-time and provides turnkey OBS Track 2 VOD audio routing.',
+    highlights: [
+      '8 procedural synth cues: Police Siren, Wasted Sub-Drop, Heist Chime, Nitrous Boost, Weapon Reload, and more',
+      'Embeds directly into OBS Studio as a Custom Browser Dock next to your audio mixer',
+      'Numpad hotkeys (1-8) and ESC panic mute for instant tactile sound triggering',
+      'Twitch VOD Track 2 separation guide guarantees your recorded clips never lose game audio'
+    ],
+    metaTitle: 'StreamShield Vice™ — 100% DMCA-Safe Soundboard & Twitch VOD Audio Splitter',
+    metaDescription: 'Eliminate DMCA strikes and muted VODs. Procedural Web Audio soundboard engine and OBS Studio Twitch VOD Track 2 audio separation for GTA streamers.',
+    seoKeywords: ['dmca safe soundboard', 'twitch vod audio splitter', 'obs custom dock soundboard', 'gta stream sound effects', 'procedural web audio soundboard'],
+    faqs: [
+      {
+        question: 'Are these sound effects copyrighted?',
+        answer: 'No. Every single sound is synthesized programmatically in real-time using mathematical oscillators. There are zero copyright fingerprints.'
+      },
+      {
+        question: 'How do I dock it inside OBS Studio?',
+        answer: 'Go to Docks → Custom Browser Docks, paste the local soundboard.html path, and snap the window directly into your OBS layout.'
+      }
+    ],
+    systemRequirements: ['OBS Studio 28+ or any modern browser', 'Default audio output device or virtual audio cable']
+  },
+  {
+    id: 'vicestream-neon-studio',
+    num: '15',
+    name: 'ViceStream Neon Studio™',
+    tagline: 'Hardware-Accelerated 1080p Cyber Neon OBS Broadcast Overlays & Scenes',
+    category: 'gaming',
+    categoryLabel: 'OBS Studio Suite',
+    price: 20,
+    formattedPrice: '$19.99',
+    originalValue: '$59',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/ehtqsx',
+    gumroadId: 'Wt2hksustjPDmF4lqYq5Gg==',
+    image: '/products/15-vicestream-neon-studio.jpg',
+    version: '2026 Neon Edition',
+    folder: '03-vicestream-neon-studio',
+    badge: 'Zero-Lag 1080p',
+    rating: 4.5,
+    reviewsCount: 18,
+    techStack: ['HTML5 & CSS3 GPU Accelerated', 'Twitch IRC WebSocket Client', 'OBS Studio Browser Source', '1080p Fullscreen Scenes', '16:9 Responsive Webcam Frame'],
+    deliverables: [
+      '1080p Stream Starting Scene (stream-starting.html) with 5-minute timer & social ticker',
+      '1080p Be Right Back Intermission Scene (be-right-back.html) with animated cassette spools',
+      '16:9 Animated Dual-Tone Neon Webcam Border (overlays/webcam-border.html)',
+      'Transparent Live Twitch Chat Overlay (overlays/chat-box.html) with WebSocket auto-connect',
+      'Step-by-step OBS Studio 60-Second Setup Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Single Broadcaster Commercial License for all personal streaming channels'
+    ],
+    description: 'Elevate your stream to professional esports broadcast quality. ViceStream Neon Studio delivers GPU-accelerated HTML5/CSS3 browser sources with authentic 80s Miami Cyberpunk aesthetic and zero CPU lag.',
+    highlights: [
+      'Runs locally via OBS Browser Source — zero subscription fees or third-party cloud watermarks',
+      'Live Twitch IRC WebSocket integration displays viewer chat messages in a glassmorphic neon box',
+      'Pure CSS animations consume less than 1% CPU while gaming at high frame rates',
+      'Easily customize social handles (@yourchannel) and countdown duration in standard Notepad'
+    ],
+    metaTitle: 'ViceStream Neon Studio™ — Hardware-Accelerated 1080p Cyber Neon OBS Overlays',
+    metaDescription: '1080p OBS starting scene, BRB screen, animated 16:9 webcam frame, and live Twitch chat overlay. Zero-lag hardware acceleration for GTA 6 broadcasters.',
+    seoKeywords: ['gta 6 obs overlay', 'neon twitch stream overlay', 'starting soon 1080p obs scene', 'twitch chat overlay browser source', 'cyberpunk webcam border'],
+    faqs: [
+      {
+        question: 'Does this overlay slow down my game FPS?',
+        answer: 'No. Unlike heavy video loops, our overlays use hardware-accelerated CSS transforms that consume negligible GPU and less than 1% CPU.'
+      },
+      {
+        question: 'How does the chat overlay connect to Twitch?',
+        answer: 'Simply add ?channel=yourusername to the Browser Source URL in OBS. It connects directly via Twitch IRC WebSocket with zero bot setup.'
+      }
+    ],
+    systemRequirements: ['OBS Studio, Streamlabs Desktop, or vMix', 'Browser Source support with Hardware Acceleration enabled']
+  },
+  {
+    id: 'consolestream-pro',
+    num: '16',
+    name: 'ConsoleStream Pro™',
+    tagline: 'PS5 & Xbox Capture Card Audio Desync Calibrator & HDR Color Fix for OBS',
+    category: 'gaming',
+    categoryLabel: 'Hardware & Calibration',
+    price: 20,
+    formattedPrice: '$19.99',
+    originalValue: '$49',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/aqvsyl',
+    gumroadId: 'VEG3p0YIcUMULzMhc_jPSQ==',
+    image: '/products/16-consolestream-pro.jpg',
+    version: '2026 Calibration Suite',
+    folder: '04-consolestream-pro',
+    badge: 'Zero Desync Fix',
+    rating: 4.2,
+    reviewsCount: 27,
+    techStack: ['Web Audio API Hardware Clock', '60/120 BPM Metronome Sync Engine', 'Frame Delay Millisecond Calculator', 'OBS Color Correction Filter Preset', 'Elgato / AVerMedia / EVGA Certified'],
+    deliverables: [
+      'Interactive Audio Sync Metronome (audio-sync-tester.html) with 1kHz tone & flash sync',
+      'Built-in Frame Delay to Millisecond Calculator for 30 FPS and 60 FPS video streams',
+      'The 4-Parameter HDR Color Restoration Preset (eliminates washed-out grey SDR capture)',
+      'Hardware Capture Card Optimization Guide (capture-card-optimization-guide.html / .md)',
+      'Step-by-step OBS Advanced Audio Properties Calibration Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Single Creator Commercial License for unlimited streaming setups'
+    ],
+    description: 'Fix the two most frustrating technical issues when streaming console gameplay: audio latency desync and washed-out HDR colors. Calibrate your capture card in under 3 minutes with precision hardware-clock metronome tools.',
+    highlights: [
+      'Eliminates lipsync and gunshot audio delay between console capture card and microphone',
+      '4-parameter Color Correction filter restores deep blacks and vibrant neon colors from HDR feeds',
+      'Certified latency offsets for Elgato HD60X (+160ms), 4K Pro (+65ms), and AVerMedia (+90ms)',
+      'Interactive visual/audio metronome with frame-by-frame delay calculation'
+    ],
+    metaTitle: 'ConsoleStream Pro™ — PS5 & Xbox Capture Card Audio Sync & HDR Color Fix for OBS',
+    metaDescription: 'Eliminate audio/video delay and washed-out HDR colors on PS5 and Xbox Series X capture cards. Calibration metronome and 4-parameter OBS color filter.',
+    seoKeywords: ['capture card audio delay fix', 'obs audio sync offset ps5', 'fix washed out hdr obs', 'elgato hd60x audio desync', 'capture card color correction'],
+    faqs: [
+      {
+        question: 'Why does my console capture look washed-out in OBS?',
+        answer: 'Consoles output HDR signal, which SDR capture cards compress into low-contrast grey. Our 4-parameter filter crushes the fog and restores vibrant contrast.'
+      },
+      {
+        question: 'Which capture cards are supported?',
+        answer: 'All USB and PCIe capture cards: Elgato (HD60X, 4K X, 4K Pro, Cam Link), AVerMedia Live Gamer, EVGA XR1, and generic USB capture devices.'
+      }
+    ],
+    systemRequirements: ['Any capture card (Elgato, AVerMedia, EVGA, etc.)', 'OBS Studio 28+ on Windows or macOS']
+  },
+  {
+    id: 'chatheist-live',
+    num: '17',
+    name: 'ChatHeist Live™',
+    tagline: 'Interactive Twitch & Kick Chat Bank Heist Minigame Overlay Engine',
+    category: 'gaming',
+    categoryLabel: 'Interactive Overlay',
+    price: 28,
+    formattedPrice: '$27.99',
+    originalValue: '$79',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/yqepns',
+    gumroadId: 'buNcR5olBoTznX-MY7I9HQ==',
+    image: '/products/17-chatheist-live.jpg',
+    version: '2026 Interactive Edition',
+    folder: '05-chatheist-live',
+    badge: 'Viewer Retention Engine',
+    rating: 4.4,
+    reviewsCount: 34,
+    techStack: ['Direct Twitch IRC WebSocket (Zero Bot/Cloud fees)', 'Web Audio API Bank Siren & Cash Chimes', 'CSS3 Shaking Physics & Vault Animations', 'OBS Studio Transparent Browser Source', 'Offline Simulation Mode'],
+    deliverables: [
+      'Transparent OBS Browser Source Overlay (chatheist-overlay.html) with Twitch IRC engine',
+      'Built-in Web Audio API synthesized bank alarms and cash celebration chimes',
+      'CSS3 physical vault door shaking, explosion effects, and automated loot split calculation',
+      'Interactive viewer commands: !heist (30s recruitment) and !join (crew roster)',
+      'One-click Offline Simulation Mode for testing on desktop before going live',
+      'Step-by-step OBS Quickstart Integration Guide (00-USER-QUICKSTART-GUIDE.html)',
+      'Single Broadcaster Commercial License for Twitch and Kick streaming channels'
+    ],
+    description: 'Transform passive lurkers into hyper-engaged participants. When viewers type !heist in chat, a glowing neon bank vault appears on your stream, initiating a 30-second recruitment countdown that divides up to $1,000,000 among participating viewers.',
+    highlights: [
+      'Direct client-side Twitch IRC WebSocket connection — zero monthly bot subscriptions or cloud server costs',
+      'Proven viewer retention mechanic: boosts live chat velocity and watch-time dramatically',
+      'Automatic cooldown timers and crew roster calculation prevent chat spam',
+      'Transparent overlay remains completely invisible on stream until a heist is triggered'
+    ],
+    metaTitle: 'ChatHeist Live™ — Interactive Twitch Chat Bank Heist Minigame Overlay for OBS',
+    metaDescription: 'Boost stream engagement with interactive chat heists. Direct Twitch IRC WebSocket bank vault minigame with !heist and !join triggers. Zero monthly fees.',
+    seoKeywords: ['twitch chat minigame overlay', 'interactive stream overlay obs', 'twitch heist bot game', 'stream viewer engagement tool', 'kick chat interactive overlay'],
+    faqs: [
+      {
+        question: 'Do I need to pay for a third-party bot or monthly server subscription?',
+        answer: 'No! ChatHeist connects directly from OBS Browser Source to Twitch IRC via secure WebSockets. It is 100% free forever after purchase.'
+      },
+      {
+        question: 'Can I test it without going live on stream?',
+        answer: 'Yes! Double-click the file in any browser to open the test simulation panel and test the heist animations and sounds offline.'
+      }
+    ],
+    systemRequirements: ['OBS Studio 28+ or Streamlabs Desktop', 'Twitch or Kick streaming channel']
+  },
+  {
+    id: 'vice-city-master-vault',
+    num: '18',
+    name: 'Vice City Master Vault™ (5-in-1 Suite)',
+    tagline: 'The Complete Day-1 Launch Arsenal for Gamers & Streamers',
+    category: 'bundle',
+    categoryLabel: 'Flagship Bundle',
+    price: 49,
+    formattedPrice: '$49',
+    originalValue: '$149',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/kwhfsp',
+    gumroadId: 'WQCagygfrX9uWG9dhMhukg==',
+    image: '/products/18-vice-city-master-vault.jpg',
+    version: '2026 Master VIP Edition',
+    folder: '06-vice-city-master-vault',
+    badge: '5-in-1 Complete Suite',
+    rating: 4.5,
+    reviewsCount: 42,
+    techStack: ['All 5 Vice City Software Engines', 'VIP Streamer Launch Handbook', 'OBS Studio Full Suite', 'Twitch IRC WebSocket Engine', 'Web Audio Procedural Soundboard', 'Capture Card Calibration Tools'],
+    deliverables: [
+      'Module 01: Vice City 100% Master Companion™ (Interactive Dual-Screen Tracker & Notion Blueprint)',
+      'Module 02: StreamShield Vice™ (Procedural DMCA-Safe Soundboard & Twitch VOD Track 2 Setup)',
+      'Module 03: ViceStream Neon Studio™ (1080p Starting Soon, BRB, Webcam Border & Twitch Chat Box)',
+      'Module 04: ConsoleStream Pro™ (Capture Card Audio Latency Metronome & HDR Color Restoration)',
+      'Module 05: ChatHeist Live™ (Interactive Twitch Chat Bank Heist Minigame Overlay Engine)',
+      'VIP Streamer Launch Handbook (VIP-STREAMER-CREATOR-LAUNCH-HANDBOOK.html / .md)',
+      '3 High-Retention Short-Form Scripts (TikTok / Reels / Shorts) + 2 Brand Sponsor Cold Email Scripts',
+      '7-Day Content Roadmap & Broadcast Schedule (Day 1 Launch through Week 1)',
+      'All-in-One Master Quickstart Blueprint (00-USER-QUICKSTART-GUIDE.html)',
+      'Master Commercial Studio License for unlimited personal, stream, and agency production'
+    ],
+    description: 'The ultimate, all-inclusive broadcasting and completion suite for the November 19, 2026 release. Includes all 5 commercial software engines plus the exclusive VIP Streamer Launch Handbook containing proven viral short scripts and sponsor email templates.',
+    highlights: [
+      'Complete 5-in-1 suite saves over $80 compared to purchasing individual modules',
+      'The definitive Day-1 Launch Order of Operations: from overlay install to viral short publishing',
+      'Zero monthly subscriptions, zero third-party dependencies, and 100% offline-ready engines',
+      'Exclusive VIP Creator Handbook with plug-and-play sponsor outreach emails for gaming hardware brands'
+    ],
+    metaTitle: 'Vice City Master Vault™ (5-in-1 Suite) — Complete Day-1 Launch Arsenal for Creators',
+    metaDescription: 'The definitive 5-in-1 creator toolkit for GTA 6 launch. Includes 100% companion, DMCA soundboard, 1080p OBS overlays, capture sync fix, chat heists, and VIP handbook.',
+    seoKeywords: ['gta 6 streamer bundle', 'vice city creator toolkit', 'obs stream pack 2026', 'gta 6 launch guide', 'gaming creator master suite'],
+    faqs: [
+      {
+        question: 'Are all 5 standalone products included in this master download?',
+        answer: 'Yes! You receive the full, standalone source code, documentation, and assets for all 5 products inside the all_suite_engines/ directory.'
+      },
+      {
+        question: 'What is inside the VIP Creator Launch Handbook?',
+        answer: 'It includes 3 viral short-form video scripts (TikTok/Reels/Shorts), 2 cold outreach email templates for gaming sponsors, and a 7-day launch streaming roadmap.'
+      }
+    ],
+    systemRequirements: ['Any modern browser (Chrome, Safari, Edge, Firefox)', 'OBS Studio 28+ for streaming modules', 'Console or PC gaming setup']
   }
+
 ];

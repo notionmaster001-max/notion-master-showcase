@@ -3,7 +3,7 @@ export interface Product {
   num: string;
   name: string;
   tagline: string;
-  category: 'saas' | 'automation' | 'agency' | 'bundle' | 'growth';
+  category: 'saas' | 'automation' | 'agency' | 'bundle' | 'growth' | 'gaming';
   categoryLabel: string;
   price: number;
   formattedPrice: string;
@@ -28,6 +28,6 @@ export interface Product {
   faqs?: { question: string; answer: string }[];
 }
 
-export type CategoryFilter = 'all' | 'saas' | 'automation' | 'agency' | 'growth' | 'bundle';
+export type CategoryFilter = 'all' | 'saas' | 'automation' | 'agency' | 'growth' | 'bundle' | 'gaming';
 
 export type LegalDocType = 'terms' | 'privacy' | 'license' | 'refund';
