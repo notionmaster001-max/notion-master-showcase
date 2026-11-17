@@ -29,7 +29,7 @@ export default function Home() {
       automation: PRODUCTS.filter((p) => p.category === 'automation').length,
       agency: PRODUCTS.filter((p) => p.category === 'agency').length,
       growth: PRODUCTS.filter((p) => p.category === 'growth').length,
-      bundle: PRODUCTS.filter((p) => p.category === 'bundle').length,
+      bundle: PRODUCTS.filter((p) => p.category === 'bundle' || p.id === 'vice-city-master-vault').length,
       gaming: PRODUCTS.filter((p) => p.category === 'gaming').length,
     };
   }, []);
@@ -38,7 +38,9 @@ export default function Home() {
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
       // Category filter
-      if (activeCategory !== 'all' && product.category !== activeCategory) {
+      if (activeCategory === 'bundle' && (product.category === 'bundle' || product.id === 'vice-city-master-vault')) {
+        // Allow master bundle under both categories
+      } else if (activeCategory !== 'all' && product.category !== activeCategory) {
         return false;
       }
       // Search query filter

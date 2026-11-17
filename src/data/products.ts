@@ -599,6 +599,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'vice-city-companion',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/vice-city-companion-starter/',
     num: '13',
     name: 'Vice City 100% Master Companion™',
     tagline: 'Dual-Screen Interactive 100% Quest & Collectibles OS (2026 Edition)',
@@ -649,6 +650,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'streamshield-vice',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/streamshield-vice-starter/',
     num: '14',
     name: 'StreamShield Vice™',
     tagline: '100% DMCA-Safe Soundboard Engine & Twitch VOD Audio Splitter',
@@ -699,6 +701,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'vicestream-neon-studio',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/vicestream-neon-studio-starter/',
     num: '15',
     name: 'ViceStream Neon Studio™',
     tagline: 'Hardware-Accelerated 1080p Cyber Neon OBS Broadcast Overlays & Scenes',
@@ -748,6 +751,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'consolestream-pro',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/consolestream-pro-starter/',
     num: '16',
     name: 'ConsoleStream Pro™',
     tagline: 'PS5 & Xbox Capture Card Audio Desync Calibrator & HDR Color Fix for OBS',
@@ -797,6 +801,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'chatheist-live',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/chatheist-live-starter/',
     num: '17',
     name: 'ChatHeist Live™',
     tagline: 'Interactive Twitch & Kick Chat Bank Heist Minigame Overlay Engine',
@@ -847,10 +852,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'vice-city-master-vault',
+    liveDemoUrl: 'https://notionmaster001-max.github.io/vice-city-creator-starter-kit/',
     num: '18',
     name: 'Vice City Master Vault™ (5-in-1 Suite)',
     tagline: 'The Complete Day-1 Launch Arsenal for Gamers & Streamers',
-    category: 'bundle',
+    category: 'gaming',
     categoryLabel: 'Flagship Bundle',
     price: 49,
     formattedPrice: '$49',

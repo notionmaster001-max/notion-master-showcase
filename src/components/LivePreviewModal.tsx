@@ -108,6 +108,34 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
         <div className="flex-1 overflow-y-auto p-5 space-y-4">
           {activeTab === 'ui' && (
             <div>
+              {/* Live Hosted Demo Iframe (if available) */}
+              {product.liveDemoUrl && (
+                <div className="mb-4 space-y-2.5">
+                  <div className="flex items-center justify-between rounded-lg border border-cyan-500/30 bg-cyan-950/20 p-2.5 px-3 text-xs text-cyan-200">
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-ping" />
+                      <span className="font-mono font-medium">Interactive Demo Loaded Below (Try Before You Buy)</span>
+                    </div>
+                    <a
+                      href={product.liveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded bg-cyan-400 px-2.5 py-1 font-mono text-[11px] font-bold text-slate-950 hover:bg-cyan-300 transition"
+                    >
+                      <span>Open Fullscreen ↗</span>
+                    </a>
+                  </div>
+                  <div className="relative h-[480px] w-full overflow-hidden rounded-lg border border-slate-300 bg-slate-950 shadow-inner">
+                    <iframe
+                      src={product.liveDemoUrl}
+                      title={`${product.name} Live Demo`}
+                      className="h-full w-full border-0"
+                      allow="autoplay"
+                    />
+                  </div>
+                </div>
+              )}
+
               {/* Product-Specific Interactive Visual Simulation */}
               {product.id === 'nextlaunch-ai' && (
                 <div className="rounded-lg border border-slate-200 bg-slate-900 text-slate-100 p-5 font-mono text-xs shadow-inner">
