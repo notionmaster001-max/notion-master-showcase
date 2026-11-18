@@ -210,7 +210,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               target="_blank"
               rel="noopener noreferrer"
               data-gumroad-single-product="true"
-              className="inline-flex items-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 px-4 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+              className="gumroad-button inline-flex items-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 px-4 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
               <span>Get on Gumroad ({product.formattedPrice})</span>
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

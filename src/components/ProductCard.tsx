@@ -149,9 +149,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
             <Link
               href={`/product/${product.id}`}
               className="rounded border border-slate-300 bg-white px-2 py-1 text-[11px] font-medium text-slate-700 shadow-sm transition hover:bg-slate-100 hover:text-slate-900"
-              title="Google SEO Page & Architecture Specs"
+              title="View Complete System Specifications & Overview"
             >
-              SEO Page ↗
+              View Details ↗
             </Link>
             <button
               onClick={() => onOpenLivePreview(product)}

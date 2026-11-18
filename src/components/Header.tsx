@@ -2,7 +2,14 @@ import React from 'react';
 
 export const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+    <>
+      {/* Top Launch Promo Strip */}
+      <div className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 px-4 py-1.5 text-center text-[11px] font-mono font-bold text-white tracking-wide shadow-sm flex items-center justify-center gap-2">
+        <span className="rounded bg-black/30 px-1.5 py-0.2 text-[9px] uppercase tracking-wider">Launch Offer</span>
+        <span>🎉 Get an extra 20% OFF with code <strong className="underline underline-offset-2">LAUNCH20</strong> at Gumroad checkout (Auto-applied!)</span>
+      </div>
+
+      <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand Lockup */}
         <div className="flex items-center gap-3">
@@ -27,7 +34,7 @@ export const Header: React.FC = () => {
           <div className="hidden sm:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="font-mono text-xs font-medium text-slate-600">
-              9 Verified Systems Live
+              18 Verified Systems Live
             </span>
           </div>
 
@@ -45,5 +52,6 @@ export const Header: React.FC = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };

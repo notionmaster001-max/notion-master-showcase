@@ -135,8 +135,6 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
                   </div>
                 </div>
               )}
-
-              {/* Product-Specific Interactive Visual Simulation */}
               {product.id === 'nextlaunch-ai' && (
                 <div className="rounded-lg border border-slate-200 bg-slate-900 text-slate-100 p-5 font-mono text-xs shadow-inner">
                   <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">

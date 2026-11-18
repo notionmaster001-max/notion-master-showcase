@@ -40,7 +40,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search boilerplates, stacks (Next.js, Python, n8n, Stripe)..."
+            placeholder="Search boilerplates, GTA 6 tools, OBS overlays, Next.js, n8n, Stripe..."
             className="w-full rounded-md border border-slate-300 bg-white py-2 pl-9 pr-3 text-xs text-slate-900 placeholder-slate-400 shadow-sm transition focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
           />
           {searchQuery && (
