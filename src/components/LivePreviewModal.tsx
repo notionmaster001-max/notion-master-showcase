@@ -321,11 +321,17 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
 
         {/* Footer Checkout CTA */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-200 bg-slate-50 px-5 py-3.5">
-          <div className="flex items-baseline gap-2">
-            <span className="font-sans text-2xl font-extrabold text-slate-900">
-              {product.formattedPrice}
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <span className="font-sans text-2xl font-black text-pink-600">
+              {product.discountPrice || product.formattedPrice}
             </span>
             <span className="font-mono text-xs uppercase tracking-wider text-slate-500">USD</span>
+            <span className="text-sm text-slate-400 line-through">
+              {product.formattedPrice}
+            </span>
+            <span className="rounded bg-pink-100 border border-pink-200 px-1.5 py-0.5 font-mono text-[9px] font-bold text-pink-700">
+              20% OFF
+            </span>
             <span className="font-mono text-[11px] text-slate-400">· Perpetual Commercial License</span>
           </div>
 
@@ -335,9 +341,9 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               data-gumroad-single-product="true"
-              className="gumroad-button flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 rounded-md bg-slate-900 px-5 py-2 text-xs font-bold text-white shadow-sm hover:bg-slate-800 transition"
+              className="gumroad-button flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 rounded-md bg-slate-900 px-5 py-2.5 text-xs font-bold text-white shadow-sm hover:bg-slate-800 transition"
             >
-              <span>Instant Purchase on Gumroad</span>
+              <span>Instant Purchase ({product.discountPrice || product.formattedPrice})</span>
               <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

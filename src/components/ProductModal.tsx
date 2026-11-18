@@ -194,11 +194,20 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         </div>
 
         {/* Modal Action Footer */}
-        <div className="flex items-center justify-between border-t border-slate-200 bg-slate-50/80 px-6 py-4">
-          <div className="font-mono text-xs text-slate-500">
-            Instant ZIP download via Gumroad library
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-200 bg-slate-50/80 px-6 py-4">
+          <div className="flex items-baseline gap-2">
+            <span className="font-sans text-xl font-black text-pink-600">
+              {product.discountPrice || product.formattedPrice}
+            </span>
+            <span className="font-mono text-xs uppercase tracking-wider text-slate-500">USD</span>
+            <span className="text-xs text-slate-400 line-through">
+              {product.formattedPrice}
+            </span>
+            <span className="rounded bg-pink-100 border border-pink-200 px-1.5 py-0.5 font-mono text-[9px] font-bold text-pink-700">
+              20% OFF AUTO-APPLIED
+            </span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
             <button
               onClick={onClose}
               className="rounded border border-slate-300 bg-white px-3.5 py-1.5 text-xs font-medium text-slate-700 shadow-sm transition hover:bg-slate-50"
@@ -210,9 +219,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
               target="_blank"
               rel="noopener noreferrer"
               data-gumroad-single-product="true"
-              className="gumroad-button inline-flex items-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 px-4 py-1.5 text-xs font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+              className="gumroad-button inline-flex items-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
             >
-              <span>Get on Gumroad ({product.formattedPrice})</span>
+              <span>Get on Gumroad ({product.discountPrice || product.formattedPrice})</span>
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

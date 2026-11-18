@@ -143,10 +143,10 @@ export default function Home() {
                   Compiler & CRC Verified
                 </div>
               </div>
-              <div className="rounded border border-slate-200 bg-slate-50/60 p-3.5">
-                <div className="font-mono text-xl font-bold text-slate-900">$14.99 – $49</div>
-                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-500 mt-0.5">
-                  Direct Gumroad Pricing
+              <div className="rounded border border-pink-200 bg-pink-50/60 p-3.5">
+                <div className="font-mono text-xl font-bold text-pink-600">$11.99 – $39.20</div>
+                <div className="font-mono text-[11px] uppercase tracking-wider text-pink-700 font-semibold mt-0.5">
+                  20% Launch Discount Active
                 </div>
               </div>
               <div className="rounded border border-slate-200 bg-slate-50/60 p-3.5">

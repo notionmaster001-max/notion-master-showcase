@@ -408,19 +408,20 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               {/* Price Banner */}
               <div className="my-5 flex items-baseline justify-between">
                 <div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-sans text-3xl font-extrabold text-slate-900">
-                      {product.formattedPrice}
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="font-sans text-3xl font-black text-pink-600">
+                      {product.discountPrice || product.formattedPrice}
                     </span>
                     <span className="font-mono text-xs uppercase tracking-wider text-slate-500">USD</span>
-                    {product.originalValue && (
-                      <span className="text-sm text-slate-400 line-through">
-                        {product.originalValue}
-                      </span>
-                    )}
+                    <span className="text-base text-slate-400 line-through">
+                      {product.formattedPrice}
+                    </span>
+                    <span className="rounded bg-pink-100 border border-pink-200 px-2 py-0.5 font-mono text-[10px] font-bold text-pink-700">
+                      20% OFF
+                    </span>
                   </div>
-                  <p className="font-mono text-[11px] text-slate-500 mt-0.5">
-                    One-time payment · Perpetual commercial rights
+                  <p className="font-mono text-[11px] text-emerald-600 font-semibold mt-1">
+                    🎉 Code LAUNCH20 auto-applied at checkout
                   </p>
                 </div>
                 <span className="rounded bg-emerald-50 px-2 py-1 font-mono text-[10px] font-semibold text-emerald-700 border border-emerald-200">
@@ -434,9 +435,9 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-gumroad-single-product="true"
-                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 py-3 px-4 text-xs font-bold text-white shadow-md hover:bg-slate-800 transition"
+                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 py-3.5 px-4 text-xs font-bold text-white shadow-md hover:bg-slate-800 transition"
               >
-                <span>Instant Checkout on Gumroad ({product.formattedPrice})</span>
+                <span>Instant Checkout on Gumroad ({product.discountPrice || product.formattedPrice})</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

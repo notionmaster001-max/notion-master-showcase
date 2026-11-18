@@ -127,21 +127,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
 
       {/* Pricing & Actions Footer */}
       <div className="border-t border-slate-100 bg-slate-50/70 p-4 rounded-b-lg">
-        <div className="mb-3 flex items-baseline justify-between">
+        <div className="mb-3 flex items-center justify-between">
           <div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-sans text-xl font-extrabold text-slate-900">
+            <div className="flex items-baseline gap-1.5 flex-wrap">
+              <span className="font-sans text-xl font-black text-pink-600">
+                {product.discountPrice || product.formattedPrice}
+              </span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">USD</span>
+              <span className="text-xs text-slate-400 line-through">
                 {product.formattedPrice}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">USD</span>
-              {product.originalValue && (
-                <span className="ml-1 text-xs text-slate-400 line-through">
-                  {product.originalValue}
-                </span>
-              )}
+              <span className="rounded bg-pink-500/10 border border-pink-500/20 px-1.5 py-0.2 font-mono text-[9px] font-bold text-pink-600">
+                20% OFF
+              </span>
             </div>
-            <p className="font-mono text-[10px] text-slate-500">
-              One-Time · Commercial License
+            <p className="font-mono text-[9px] text-emerald-600 font-semibold mt-0.5">
+              Code LAUNCH20 Auto-Applied
             </p>
           </div>
 
@@ -151,7 +152,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
               className="rounded border border-slate-300 bg-white px-2 py-1 text-[11px] font-medium text-slate-700 shadow-sm transition hover:bg-slate-100 hover:text-slate-900"
               title="View Complete System Specifications & Overview"
             >
-              View Details ↗
+              Details
             </Link>
             <button
               onClick={() => onOpenLivePreview(product)}
@@ -176,9 +177,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
           target="_blank"
           rel="noopener noreferrer"
           data-gumroad-single-product="true"
-          className="gumroad-button flex w-full items-center justify-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 py-2 px-3 text-xs font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+          className="gumroad-button flex w-full items-center justify-center gap-1.5 rounded-md border border-slate-900 bg-slate-900 py-2.5 px-3 text-xs font-bold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
         >
-          <span>Purchase on Gumroad</span>
+          <span>Purchase on Gumroad ({product.discountPrice || product.formattedPrice})</span>
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>

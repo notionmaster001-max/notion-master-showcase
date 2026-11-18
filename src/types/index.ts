@@ -8,6 +8,7 @@ export interface Product {
   price: number;
   formattedPrice: string;
   originalValue?: string;
+  discountPrice?: string;
   gumroadUrl: string;
   image: string;
   version: string;
