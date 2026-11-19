@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PRODUCTS } from '../data/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://notion-master-showcase.vercel.app';
+  const baseUrl = 'https://notion-master-showcase-two.vercel.app';
   const currentDate = new Date().toISOString();
 
   // Root Homepage

@@ -522,7 +522,7 @@ export const PRODUCTS: Product[] = [
     image: '/products/11-mcpforge.jpg',
     version: 'v1.0 (MCP SDK 1.5.0)',
     folder: '11-mcpforge-enterprise',
-    badge: 'Certified Claude & Cursor',
+    badge: 'Compatible with Claude & Cursor',
     rating: 4.4,
     reviewsCount: 28,
     techStack: ['TypeScript 5.7', 'Node.js', '@modelcontextprotocol/sdk', 'Zod', 'Claude Desktop', 'Cursor IDE', 'Antigravity'],
@@ -537,7 +537,7 @@ export const PRODUCTS: Product[] = [
     ],
     description: 'Connect AI reasoning engines directly to your private databases, internal APIs, and developer toolchains. MCPForge Enterprise delivers a production-grade Model Context Protocol server equipped with 5 pre-built enterprise tools.',
     highlights: [
-      'Certified for Claude Desktop, Cursor IDE, Antigravity, and Gemini CLI',
+      'Compatible with Claude Desktop, Cursor IDE, Antigravity, and Gemini CLI',
       'Safe SQL executor with schema introspection and accidental modification blocks',
       'Markdown web scraper converting live URLs into clean LLM context',
       'Dual stdio + HTTP Server-Sent Events (SSE) network architectures'
@@ -561,7 +561,7 @@ export const PRODUCTS: Product[] = [
     id: 'stackforge-docker',
     num: '12',
     name: 'StackForge™',
-    tagline: '4 Production-Ready VPS Stacks (1 Master Multi-Service + 3 Standalone)',
+    tagline: '3 Production-Ready VPS Stacks (1 Master Multi-Service + 2 Standalone)',
     category: 'agency',
     categoryLabel: 'DevOps & Cloud',
     price: 47,
@@ -576,14 +576,14 @@ export const PRODUCTS: Product[] = [
     badge: 'Saves +/Mo',
     rating: 4.2,
     reviewsCount: 37,
-    techStack: ['Docker Compose v2/v5', 'Caddy 2.8.4 (Auto-SSL)', 'PostgreSQL 16.8', 'Redis 7.2.7 (Optional)', 'n8n 1.79.1', 'Open WebUI 0.5.12', 'Ubuntu 22/24 LTS'],
+    techStack: ['Docker Compose v2', 'Caddy 2.8.4 (Auto-SSL)', 'PostgreSQL 16.8', 'Redis 7.2.7 (Optional)', 'n8n 1.123.98', 'Open WebUI 0.13.4', 'Ubuntu 22/24 LTS'],
     deliverables: [
       'Master Multi-Service Docker Compose architecture with Caddy Auto-SSL reverse proxy',
       'Hardened PostgreSQL 16.8 database with container healthchecks, schema init, and daily backup script',
       'Redis 7.2.7 high-performance cache with persistence and password security (optional service)',
-      'Production n8n 1.79.1 automation runner linked directly to Postgres with webhook execution',
-      'Self-hosted Open WebUI 0.5.12 private AI chat stack pre-configured for Ollama',
-      '3 Standalone micro-stacks for Ollama AI (0.5.7), MinIO S3 Object Storage, and Plausible Analytics CE',
+      'Production n8n 1.123.98 automation runner linked directly to Postgres with webhook execution',
+      'Self-hosted Open WebUI 0.13.4 private AI chat stack pre-configured for Ollama',
+      '2 Standalone micro-stacks for Ollama AI (0.40.16) and Plausible Analytics CE (v3.2.1)',
       'Turnkey HTML Quickstart Deployment Guide (00-USER-QUICKSTART-GUIDE.html)',
       'Perpetual Commercial License for unlimited self-hosted VPS deployments'
     ],
@@ -591,11 +591,11 @@ export const PRODUCTS: Product[] = [
     highlights: [
       'Zero-config Let\'s Encrypt SSL certificates automatically provisioned by Caddy 2.8',
       'Automated cron-based PostgreSQL backup script with S3 upload and retention pruning',
-      'Certified on Ubuntu 22.04/24.04 LTS, Hetzner Cloud, DigitalOcean, and AWS EC2',
+      'Designed for Ubuntu/Debian Linux VPS on Hetzner, DigitalOcean, or AWS EC2',
       'Isolated Docker bridge networks with strict external port exposure security'
     ],
-    metaTitle: 'StackForge™ — 25+ Production Docker Compose & Self-Hosted Cloud Blueprints',
-    metaDescription: 'Cut cloud bills by +/month. 25+ production Docker Compose stacks with Caddy Auto-SSL, PostgreSQL 16, Redis 7, n8n automation, and Open WebUI for  VPS.',
+    metaTitle: 'StackForge™ — 3 Production Docker Compose & Self-Hosted Cloud Blueprints',
+    metaDescription: 'Production Docker Compose stacks (1 master + 2 standalone) with Caddy Auto-SSL, PostgreSQL 16.8, Redis 7.2, n8n 1.123 automation, and Open WebUI 0.13 for Linux VPS.',
     seoKeywords: ['docker compose production blueprints', 'self hosted saas docker', 'n8n docker compose postgres', 'caddy auto ssl docker', 'hetzner vps docker template'],
     faqs: [
       {
@@ -921,6 +921,257 @@ export const PRODUCTS: Product[] = [
       }
     ],
     systemRequirements: ['Any modern browser (Chrome, Safari, Edge, Firefox)', 'OBS Studio 28+ for streaming modules', 'Console or PC gaming setup']
+  }
+  ,
+  {
+    id: 'cursorforge-pro-rules',
+    num: '19',
+    name: 'CursorForge Pro™',
+    tagline: '50+ Production AI Coding Rules for Next.js 15, Supabase, Tailwind v4 & Cursor IDE',
+    category: 'agency',
+    categoryLabel: 'Developer Tools',
+    price: 0,
+    formattedPrice: '$0 FREE',
+    originalValue: '$79',
+    discountPrice: '$0 (Limited Promo)',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/cursorforge-pro-rules',
+    gumroadId: '_PjLvz1bswRODie7hVuwOw==',
+    image: '/products/19-cursorforge-pro.jpg',
+    version: '2026 Production Edition',
+    folder: '13-cursorforge-pro-rules',
+    badge: 'Zero Hallucinations',
+    rating: 4.9,
+    reviewsCount: 42,
+    techStack: ['Cursor IDE 0.40+', '.mdc Modular Rules', 'Next.js 15 (App Router)', 'React 19 Server Actions', 'Supabase SSR & RLS', 'Tailwind CSS v4', 'Stripe Billing', 'Drizzle & Prisma ORM', 'TypeScript 5.6'],
+    deliverables: [
+      '50+ modular .mdc rules scoped by globs to prevent context bloat',
+      'Next.js 15 async Request APIs and Server Actions rules with Zod validation',
+      'Supabase SSR cookie authentication & Row Level Security (RLS) enforcement',
+      'Stripe webhook signature verification with raw body handling',
+      'Tailwind CSS v4 utility composition & theme variables',
+      '00-USER-QUICKSTART-GUIDE.md for 30-second installation',
+      'Perpetual Commercial License for unlimited projects'
+    ],
+    description: 'Stop letting Cursor AI hallucinate on Next.js 15 breaking changes and broken Supabase session cookies. CursorForge Pro gives you 50+ modular, battle-tested .mdc rules that enforce production engineering standards automatically.',
+    highlights: [
+      'Modular scoped rules with globs so they only load when editing matching files',
+      'Covers Next.js 15, React 19, Supabase SSR, Stripe, Tailwind v4, and Docker',
+      'Zero-setup: drop .cursor folder into project root and open Cursor IDE',
+      'Strict TypeScript and security guardrails against SQL injection and insecure CORS'
+    ],
+    metaTitle: 'CursorForge Pro™ — 50+ Production Cursor Rules for Next.js 15 & Supabase',
+    metaDescription: 'Eliminate AI hallucinations in Cursor IDE with 50+ battle-tested .mdc rules for Next.js 15, React 19 Server Actions, Supabase SSR, and Tailwind v4.',
+    seoKeywords: ['cursor rules nextjs 15', 'cursor mdc rules', 'cursor ai hallucinations fix', 'supabase ssr cursor rules', 'tailwind v4 cursor rules'],
+    faqs: [
+      {
+        question: 'How do I install CursorForge Pro?',
+        answer: 'Extract the zip and copy the .cursor folder into your project root. Cursor IDE automatically detects and activates all 50+ rules.'
+      },
+      {
+        question: 'Does it work with Cursor 0.40+ and .mdc format?',
+        answer: 'Yes! Every rule is written in Cursor native .mdc format with YAML frontmatter and glob filters.'
+      }
+    ],
+    systemRequirements: ['Cursor IDE 0.40+ (Mac, Windows, or Linux)', 'Any modern web codebase (Next.js, React, Node, Python, etc.)']
+  },
+  {
+    id: 'claude-md-master-kit',
+    num: '20',
+    name: 'CLAUDE.md Master Kit™',
+    tagline: '20 Production Architecture Blueprints for Anthropic Claude Code Agent',
+    category: 'agency',
+    categoryLabel: 'AI & Terminal',
+    price: 0,
+    formattedPrice: '$0 FREE',
+    originalValue: '$59',
+    discountPrice: '$0 (Limited Promo)',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/claude-md-master-kit',
+    gumroadId: 'lrQgE0eEN6D0d2ck9F37dA==',
+    image: '/products/20-claude-md-kit.jpg',
+    version: 'v2.0 Claude 3.7 Ready',
+    folder: '14-claude-md-master-kit',
+    badge: 'Saves 80% Tokens',
+    rating: 4.8,
+    reviewsCount: 29,
+    techStack: ['Claude Code (Anthropic CLI)', 'Claude 3.5 Sonnet / 3.7', 'Next.js 15 App Router', 'FastAPI Python', 'Docker Compose', 'n8n AI Blueprints', 'Chrome Extension MV3', 'Turborepo Fullstack'],
+    deliverables: [
+      '20 specialized CLAUDE.md templates for modern production stacks',
+      'Pre-configured build, lint, test, and run commands',
+      'Directory structure mappings to prevent expensive token exploration',
+      'Code style guidelines and strict prohibited patterns',
+      '00-USER-QUICKSTART-GUIDE.md with 30-second instructions',
+      'Perpetual Commercial License for unlimited repos'
+    ],
+    description: 'Claude Code is incredible, but without CLAUDE.md in your project root, the agent wastes expensive API tokens guessing your build commands and architecture. CLAUDE.md Master Kit gives you 20 battle-tested stack blueprints.',
+    highlights: [
+      'Saves up to 80% of exploratory API tokens on first session run',
+      'Includes Next.js 15, FastAPI, Docker, Chrome MV3, n8n, Expo, and MCP stacks',
+      'One-click setup: drop into project root, rename to CLAUDE.md, and launch',
+      'Pre-configured verification commands (lint, test, build)'
+    ],
+    metaTitle: 'CLAUDE.md Master Kit™ — 20 Production Templates for Claude Code CLI',
+    metaDescription: 'Stop burning API tokens in Claude Code. 20 production-grade CLAUDE.md templates for Next.js 15, FastAPI, Docker Compose, n8n, and Supabase.',
+    seoKeywords: ['claude code claude.md templates', 'claude.md best practices', 'anthropic claude code cli setup', 'claude code nextjs template'],
+    faqs: [
+      {
+        question: 'What is CLAUDE.md?',
+        answer: 'CLAUDE.md is the official configuration file read by Anthropic Claude Code terminal agent upon startup to understand your project architecture and commands.'
+      },
+      {
+        question: 'Which stacks are included?',
+        answer: '20 stacks including Next.js 15, FastAPI, Docker Compose, n8n, Supabase, Turborepo, Stripe SaaS, Chrome MV3, and React Native.'
+      }
+    ],
+    systemRequirements: ['Claude Code CLI (claude in terminal)', 'Anthropic API Key or Claude Pro/Team subscription']
+  },
+  {
+    id: 'openapi-to-mcp-forge',
+    num: '21',
+    name: 'OpenAPI-to-MCP Forge Pro™',
+    tagline: 'Production Compiler Engine: Convert Any REST API into FastMCP Python Servers',
+    category: 'saas',
+    categoryLabel: 'Developer Tools',
+    price: 0,
+    formattedPrice: '$0 FREE',
+    originalValue: '$99',
+    discountPrice: '$0 (Limited Promo)',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/openapi-to-mcp-forge',
+    gumroadId: 'r2snDUbboAjiBTT8GgoTiQ==',
+    image: '/products/21-openapi-to-mcp.jpg',
+    version: 'v2.0 Hardened Engine',
+    folder: '15-openapi-to-mcp-forge',
+    badge: 'Verified Test Suite',
+    rating: 4.9,
+    reviewsCount: 31,
+    techStack: ['Python 3.10+', 'Model Context Protocol (FastMCP)', 'OpenAPI 3.0 / 3.1 / Swagger', 'Docker & Docker Compose', 'Claude Desktop', 'Cursor IDE'],
+    deliverables: [
+      'openapi_to_mcp.py CLI compiler engine with path URL quoting & arg deduplication',
+      'Production FastMCP server.py runtime with connection pooling',
+      'Full test suite (test_converter.py, test_edge_cases.py, test_live_mock_execution.py)',
+      'Multi-stage Dockerfile & docker-compose.yml',
+      'Sample specs (Petstore & E-commerce)',
+      '00-USER-QUICKSTART-GUIDE.md'
+    ],
+    description: 'Stop writing hundreds of lines of boilerplate MCP tool functions by hand. OpenAPI-to-MCP Forge automatically parses OpenAPI 3.0/3.1 specs and generates a fully typed, production-ready Python FastMCP server in seconds.',
+    highlights: [
+      'Fully typed @mcp.tool() generation with docstrings and type annotations',
+      'Handles path params, query parameters, header auth, and JSON request bodies',
+      'Includes live mock HTTP server test suite for 100% verified execution',
+      'Pre-configured Claude Desktop and Cursor MCP configs'
+    ],
+    metaTitle: 'OpenAPI-to-MCP Forge Pro™ — REST API to FastMCP Server Compiler',
+    metaDescription: 'Automatically convert any OpenAPI 3.0/3.1 Swagger spec into a fully typed Python FastMCP Server for Claude Desktop and Cursor.',
+    seoKeywords: ['openapi to mcp', 'fastmcp generator', 'convert swagger to mcp', 'python mcp server generator', 'claude desktop mcp tools'],
+    faqs: [
+      {
+        question: 'Does it support OpenAPI 3.0 and 3.1?',
+        answer: 'Yes! Both JSON and YAML OpenAPI 3.0 and 3.1 specifications are fully supported.'
+      },
+      {
+        question: 'How do I connect the generated server to Claude Desktop?',
+        answer: 'Copy the generated claude_desktop_config.json snippet into your Claude Desktop config file and restart Claude.'
+      }
+    ],
+    systemRequirements: ['Python 3.10+ or Docker', 'mcp[cli] package']
+  },
+  {
+    id: 'remotemcp-pro-cloudflare',
+    num: '22',
+    name: 'RemoteMCP Pro™',
+    tagline: 'TypeScript Remote MCP Server on Cloudflare Workers with OAuth2 PKCE',
+    category: 'saas',
+    categoryLabel: 'Cloud & Edge AI',
+    price: 47,
+    formattedPrice: '$47',
+    originalValue: '$95',
+    discountPrice: '$37.60',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/remotemcp-pro-cloudflare/LAUNCH20',
+    gumroadId: 'ZDhBD5Yb1j1kSIasyFtAyA==',
+    image: '/products/22-remotemcp-pro.jpg',
+    version: 'v2.0 Edge Native',
+    folder: '16-remotemcp-pro-cloudflare',
+    badge: 'Sub-50ms Edge',
+    rating: 4.7,
+    reviewsCount: 19,
+    techStack: ['TypeScript 5.6', 'Cloudflare Workers (Wrangler)', 'OAuth2 PKCE Flow', 'JSON-RPC 2.0 (MCP Spec)', 'Cloudflare D1 & KV Storage'],
+    deliverables: [
+      'Complete TypeScript source code in src/ (auth, middleware, tools, types)',
+      'OAuth2 PKCE authorization flow & sliding-window rate limiting',
+      'Wrangler.toml edge deployment configuration',
+      'Claude Desktop & Cursor remote MCP configuration templates',
+      '00-USER-QUICKSTART-GUIDE.md',
+      'Perpetual Commercial License'
+    ],
+    description: 'Local stdio MCP servers only work on one machine. RemoteMCP Pro gives you a production-grade TypeScript MCP server engineered for Cloudflare Workers with OAuth2 PKCE authentication and zero cold starts.',
+    highlights: [
+      'Runs globally on Cloudflare Workers edge network with sub-50ms latency',
+      'OAuth2 PKCE user authentication and scoped token verification',
+      'Built-in sliding-window rate limiting to prevent abuse',
+      'Pre-configured JSON-RPC 2.0 endpoint compatible with Claude & Cursor'
+    ],
+    metaTitle: 'RemoteMCP Pro™ — Cloudflare Workers Remote MCP Server with OAuth2',
+    metaDescription: 'Deploy globally distributed remote Model Context Protocol servers on Cloudflare Workers with OAuth2 PKCE and rate limiting.',
+    seoKeywords: ['remote mcp server', 'cloudflare workers mcp', 'typescript mcp oauth', 'mcp sse server cloudflare', 'remote model context protocol'],
+    faqs: [
+      {
+        question: 'Why run MCP on Cloudflare Workers?',
+        answer: 'Cloudflare Workers provide sub-50ms latency globally, zero cold starts, and eliminate the need to run local stdio processes on every developer machine.'
+      },
+      {
+        question: 'Does it support OAuth2 PKCE?',
+        answer: 'Yes! It includes a full OAuth2 PKCE authorization flow for secure token-based agent access.'
+      }
+    ],
+    systemRequirements: ['Node.js 18+ and npm', 'Free Cloudflare account and Wrangler CLI']
+  },
+  {
+    id: 'agentforge-n8n-v2',
+    num: '23',
+    name: 'AgentForge n8n v2™',
+    tagline: '10 Production Claude + Supabase AI Automation Workflows for n8n',
+    category: 'automation',
+    categoryLabel: 'AI Workflows',
+    price: 0,
+    formattedPrice: '$0 FREE',
+    originalValue: '$89',
+    discountPrice: '$0 (Limited Promo)',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/agentforge-n8n-v2-pack',
+    gumroadId: '9KCyqwL7QTCHuMM0d8s35w==',
+    image: '/products/23-agentforge-n8n.jpg',
+    version: 'v2.0 Production Pack',
+    folder: '17-agentforge-n8n-v2',
+    badge: '10 Ready Workflows',
+    rating: 4.9,
+    reviewsCount: 48,
+    techStack: ['n8n v1.0+', 'Claude 3.5 Sonnet API', 'OpenAI Embeddings', 'Supabase pgvector', 'Slack & Gmail Webhooks', 'GitHub API'],
+    deliverables: [
+      '10 Production-grade JSON workflows (RAG pipeline, lead scoring, support triage, etc.)',
+      'Pre-connected node graphs with error handling and fallback routing',
+      'Supabase pgvector SQL schema init script',
+      '00-USER-QUICKSTART-GUIDE.md with step-by-step import instructions',
+      'Perpetual Commercial License'
+    ],
+    description: 'Supercharge your business with 10 production AI agent workflows ready to import directly into n8n. Features RAG document pipelines, automated lead enrichment, support triage, and executive summaries using Claude 3.5 Sonnet and Supabase.',
+    highlights: [
+      '100% import-tested in n8n v1.0+ with verified node graph topology',
+      'Integrates Claude API, OpenAI text-embedding-3-small, and Supabase pgvector',
+      'Includes autonomous data cleansing and multi-platform content repurposing',
+      'Transparent disclosure: requires your own Anthropic and OpenAI API keys'
+    ],
+    metaTitle: 'AgentForge n8n v2™ — 10 Production Claude & Supabase AI Automation Workflows',
+    metaDescription: 'Import 10 battle-tested n8n AI agent workflows: RAG vector pipelines, lead qualification, support triage, and PR review using Claude 3.5 and Supabase.',
+    seoKeywords: ['n8n ai workflows', 'n8n rag pipeline', 'n8n claude api integration', 'n8n supabase pgvector', 'n8n automation blueprints'],
+    faqs: [
+      {
+        question: 'Are these workflows compatible with self-hosted n8n?',
+        answer: 'Yes! Works on both n8n Cloud and self-hosted Docker n8n instances (v1.0+).'
+      },
+      {
+        question: 'Do I need my own API keys?',
+        answer: 'Yes, you will add your Anthropic and OpenAI API keys to the respective credential nodes in n8n.'
+      }
+    ],
+    systemRequirements: ['n8n version 1.0 or higher (cloud or self-hosted)', 'Anthropic API key and OpenAI API key']
   }
 
 ];
