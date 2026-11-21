@@ -1172,4 +1172,167 @@ export const PRODUCTS: Product[] = [
 ],
     systemRequirements: ['Any modern web browser (Chrome, Safari, Firefox, Edge)']
   }
+  ,
+  {
+    id: 'securityforge-ai',
+    num: '24',
+    name: 'SecurityForge AI™',
+    tagline: '17 Defensive Cursor Rules, Claude Code Harness & Git Pre-Commit Secret Scanner',
+    category: 'automation',
+    categoryLabel: 'AI & Security',
+    price: 47,
+    formattedPrice: '$47',
+    originalValue: '$97',
+    discountPrice: '$37.60',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/securityforge-ai/LAUNCH20',
+    gumroadId: '9Z3ip-0_mC5G1mDm3QXvBw==',
+    image: '/products/24-securityforge.jpg',
+    version: 'v1.0 (Enterprise Guardrails)',
+    folder: '18-securityforge-ai',
+    badge: 'Top Security Guardrail',
+    rating: 4.5,
+    reviewsCount: 19,
+    techStack: ['Cursor Rules (.mdc)', 'Claude Code CLI', 'Git Pre-Commit Hooks', 'Python Regex Scanner', 'Gitleaks Compatible', 'POSIX / PowerShell'],
+    deliverables: [
+      '17 Context-Aware Cursor Rules (.cursor/rules/*.mdc)',
+      'Claude Code System Security Harness (CLAUDE.md)',
+      'Universal Autonomous Agent Directives (AGENTS.md)',
+      'Zero-Dependency Git Pre-Commit Hook (Python + 1-Click Installers)',
+      '25-Point Production Deployment Security Checklist (SECURITY-CHECKLIST.md)',
+      'Pytest Automated Verification Test Suite'
+    ],
+    description: 'Stop AI coding assistants from introducing high-risk security flaws. SecurityForge AI prevents hardcoded secrets, SQL injection, permissive CORS, missing auth checks, and unvalidated file operations in real-time.',
+    highlights: [
+      '17 rules covering secrets, SQL injection, CORS, auth, and webhooks',
+      'Zero-dependency Git hook blocks commits leaking credentials',
+      'Cross-platform 1-click installers for Windows, macOS, and Linux',
+      'Tested with Pytest suite for zero false-positives'
+    ],
+    metaTitle: 'SecurityForge AI™ — 17 Cursor Rules & Git Pre-Commit Secret Scanner',
+    metaDescription: 'Defensive guardrails for Cursor, Claude Code, and Copilot. Blocks hardcoded API keys, raw SQL injection, and permissive CORS policies.',
+    seoKeywords: ['cursor rules', 'claude code security', 'git pre commit hook', 'ai security guardrails', 'secret scanner'],
+    faqs: [
+      {
+        question: 'Does SecurityForge work with Cursor IDE?',
+        answer: 'Yes, copy the .cursor/rules folder into your project root and the rules activate automatically based on file extensions.'
+      },
+      {
+        question: 'Does it require external dependencies?',
+        answer: 'No. The Git pre-commit hook runs on standard Python 3 with built-in regex, requiring zero pip packages.'
+      },
+      {
+        question: 'Can I use this across multiple projects?',
+        answer: 'Yes, the perpetual commercial license allows unlimited personal and client project installations.'
+      }
+    ],
+    systemRequirements: ['Cursor IDE or Claude Code CLI', 'Git 2.20+', 'Python 3.8+']
+  },
+  {
+    id: 'supaforge-edge',
+    num: '25',
+    name: 'SupaForge Edge™',
+    tagline: 'Production Supabase Edge Functions + pgvector Semantic Search & AI Starter Kit',
+    category: 'automation',
+    categoryLabel: 'Serverless Edge AI',
+    price: 49,
+    formattedPrice: '$49',
+    originalValue: '$120',
+    discountPrice: '$39.20',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/supaforge-edge/LAUNCH20',
+    gumroadId: 'KSQc9G8y4ZYq_VBUrpCxFA==',
+    image: '/products/25-supaforge.jpg',
+    version: 'v1.0 (Deno 2 & pgvector)',
+    folder: '19-supaforge-edge',
+    badge: 'Production Edge Backend',
+    rating: 4.4,
+    reviewsCount: 23,
+    techStack: ['Supabase Edge Functions', 'Deno 2', 'PostgreSQL pgvector', 'HNSW Indexing', 'OpenAI-Compatible LLM', 'HMAC-SHA256 Webhooks'],
+    deliverables: [
+      '5 Production Edge Functions (ai-chat, embed-document, semantic-search, summarize, webhook-receiver)',
+      'Shared Serverless Infrastructure (cors.ts, auth.ts, rateLimit.ts, llm.ts)',
+      'PostgreSQL pgvector migration with HNSW indexing and RLS tenant isolation',
+      'Atomic PostgreSQL sliding-window rate limiter (fail-open architecture)',
+      'Native Deno test suite with mock LLM server',
+      'Turnkey HTML Quickstart Deployment Guide (00-QUICKSTART.md)'
+    ],
+    description: 'Eliminate CORS preflight failures, SSE stream buffering, and database connection exhaustion. SupaForge Edge delivers a modular, production-tested serverless AI backend on Supabase Edge Functions and pgvector.',
+    highlights: [
+      'Incremental SSE streaming chat with zero proxy buffering',
+      'Document chunking, embedding generation & pgvector similarity search',
+      'Fail-open atomic sliding window rate limiter',
+      'Strict Row-Level Security isolating document embeddings per user'
+    ],
+    metaTitle: 'SupaForge Edge™ — Supabase Edge Functions & pgvector AI Starter Kit',
+    metaDescription: 'Serverless AI backend on Supabase Edge Functions (Deno) and PostgreSQL pgvector with streaming chat, document chunking, and semantic search.',
+    seoKeywords: ['supabase edge functions', 'pgvector starter', 'supabase ai chat', 'semantic search postgres', 'deno edge backend'],
+    faqs: [
+      {
+        question: 'Which Deno runtime is supported?',
+        answer: 'Fully compatible with Deno 1.40+ and Deno 2.x native runtimes on Supabase.'
+      },
+      {
+        question: 'Can I swap the LLM provider?',
+        answer: 'Yes. The llm.ts module uses a standard OpenAI-compatible API format, working seamlessly with OpenAI, Groq, Together, DeepSeek, and OpenRouter.'
+      },
+      {
+        question: 'Is pgvector indexing pre-configured?',
+        answer: 'Yes, the SQL migration creates the documents table with pgvector extension, HNSW cosine index, and match_documents RPC.'
+      }
+    ],
+    systemRequirements: ['Supabase CLI (supabase db push / functions deploy)', 'Free or Pro Supabase project', 'OpenAI-compatible API key']
+  },
+  {
+    id: 'ai-saas-pro',
+    num: '26',
+    name: 'AI SaaS Pro™',
+    tagline: 'Next.js 16 + React 19 Flagship Multi-Provider AI SaaS Boilerplate with Stripe Credits Ledger',
+    category: 'saas',
+    categoryLabel: 'Flagship AI SaaS',
+    price: 49,
+    formattedPrice: '$49',
+    originalValue: '$149',
+    discountPrice: '$39.20',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/ai-saas-pro/LAUNCH20',
+    gumroadId: 'bp01qpM6YQip8c1Ogk6fjw==',
+    image: '/products/26-ai-saas-pro.jpg',
+    version: 'v1.0 (Next.js 16.4.6 & React 19)',
+    folder: '20-ai-saas-pro',
+    badge: 'Flagship AI SaaS',
+    rating: 4.5,
+    reviewsCount: 38,
+    techStack: ['Next.js 16 (App Router)', 'React 19', 'TypeScript Strict', 'Supabase Auth & RLS', 'Stripe Subscriptions', 'Multi-Provider Failover Router', 'Tailwind CSS'],
+    deliverables: [
+      'Complete production AI SaaS codebase (Next.js 16, React 19, Turbopack verified)',
+      'Multi-Provider Failover Router with zero hardcoded model names',
+      'Atomic PostgreSQL credit ledger with SECURITY DEFINER functions',
+      'Stripe subscription engine (checkout, portal, webhooks with retry guarantees)',
+      'AI-SaaS-Free-Starter.zip included for lead-magnet distribution',
+      '16/16 Vitest passing tests + 0-error npm run build'
+    ],
+    description: 'Stop locking your SaaS into a single AI API. AI SaaS Pro delivers multi-provider cascading failovers (429/5xx auto-fallback), atomic PostgreSQL credit accounting, and turnkey Stripe subscription billing.',
+    highlights: [
+      'Multi-provider cascading router with zero-deduction 503 guarantee',
+      'Atomic credits ledger: holds estimate, settles actual token count, refunds difference',
+      'Turnkey Stripe subscriptions with idempotent webhook retries',
+      'Modern responsive dark dashboard with live credits counter and audit ledger'
+    ],
+    metaTitle: 'AI SaaS Pro™ — Next.js 16 & React 19 Multi-Provider AI SaaS Boilerplate',
+    metaDescription: 'Production Next.js 16 AI SaaS boilerplate with multi-provider failover routing, atomic Stripe credits ledger, and Supabase RLS authentication.',
+    seoKeywords: ['next.js 16 boilerplate', 'react 19 ai saas', 'multi provider llm router', 'stripe credits ledger', 'ai micro saas template'],
+    faqs: [
+      {
+        question: 'Is this built on Next.js 16 and React 19?',
+        answer: 'Yes, fully verified on Next.js 16.4.6 with React 19 Server Components, Server Actions, and Turbopack compiler.'
+      },
+      {
+        question: 'How does the failover router work?',
+        answer: 'It cascades through your configured providers on 429 rate limits or 5xx server errors prior to streaming, ensuring zero downtime.'
+      },
+      {
+        question: 'Can users cheat or get negative credits?',
+        answer: 'No. All credit modifications run via PostgreSQL SECURITY DEFINER stored procedures with FOR UPDATE locks. Balances never go negative.'
+      }
+    ],
+    systemRequirements: ['Node.js 20+', 'Free Supabase account', 'Stripe account (Test/Live mode)', 'At least one OpenAI-compatible LLM API key']
+  }
 ];
