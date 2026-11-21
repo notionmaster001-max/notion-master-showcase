@@ -80,12 +80,12 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         <div className="overflow-y-auto p-6 space-y-6">
           {/* Header & Image */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 400px"
               />
             </div>

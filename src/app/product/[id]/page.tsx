@@ -172,13 +172,13 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Image & Media */}
           <div className="lg:col-span-7">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm">
+            <div className="relative aspect-square w-full max-w-xl mx-auto overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm">
               <Image
                 src={product.image}
                 alt={product.name}
                 fill
                 priority
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 650px"
               />
               {product.badge && (

@@ -36,12 +36,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
     <div className="group flex flex-col justify-between rounded-lg border border-slate-200 bg-white transition-all duration-200 hover:border-slate-300 hover:shadow-md">
       {/* Visual Header & Image */}
       <div>
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-lg border-b border-slate-100 bg-slate-50">
+        <div className="relative aspect-square w-full overflow-hidden rounded-t-lg border-b border-slate-100 bg-slate-50">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover object-top transition duration-300 group-hover:scale-[1.02]"
+            className="object-cover object-center transition duration-300 group-hover:scale-[1.02]"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           {product.badge && (
