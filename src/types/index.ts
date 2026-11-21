@@ -11,6 +11,7 @@ export interface Product {
   discountPrice?: string;
   gumroadUrl: string;
   image: string;
+  galleryImages?: string[];
   version: string;
   techStack: string[];
   deliverables: string[];
