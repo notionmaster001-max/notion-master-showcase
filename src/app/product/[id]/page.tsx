@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     };
   }
 
-  const baseUrl = 'https://notion-master-showcase.vercel.app';
+  const baseUrl = 'https://notion-master-showcase-two.vercel.app';
   const url = `${baseUrl}/product/${product.id}`;
   const title = product.metaTitle || `${product.name} — Commercial Software Toolkit`;
   const description = product.metaDescription || product.tagline;
@@ -71,7 +71,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const baseUrl = 'https://notion-master-showcase.vercel.app';
+  const baseUrl = 'https://notion-master-showcase-two.vercel.app';
   const pageUrl = `${baseUrl}/product/${product.id}`;
 
   // Structured Data (JSON-LD) for Google Rich Snippets
