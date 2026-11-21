@@ -5,10 +5,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://notion-master-showcase-two.vercel.app"),
   title: "Notion Master Studio — Institutional Software Boilerplates & Digital Assets",
-  description: "Production-grade Next.js 15 boilerplates, n8n automation blueprints, Chrome MV3 extensions, and high-ticket client acquisition systems for developers and agency founders.",
-  keywords: ["Next.js 15 boilerplate", "AI SaaS starter", "Chrome Extension MV3", "n8n automation blueprints", "Python lead scraper", "Client contracts"],
+  description: "Production-grade Next.js 16 boilerplates, n8n automation blueprints, Chrome MV3 extensions, and high-ticket client acquisition systems for developers and agency founders.",
+  keywords: ["Next.js 16 boilerplate", "React 19 SaaS starter", "Chrome Extension MV3", "n8n automation blueprints", "Python lead scraper", "Client contracts", "Supabase edge functions", "MCP server"],
   alternates: {
     canonical: "https://notion-master-showcase-two.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     title: "Notion Master Studio — Commercial Digital Assets",
@@ -17,10 +28,25 @@ export const metadata: Metadata = {
     siteName: "Notion Master Studio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://notion-master-showcase-two.vercel.app/products/26-ai-saas-pro.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Notion Master Studio — Institutional Software Boilerplates",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Notion Master Studio — Commercial Digital Assets",
+    description: "Production-grade Next.js 16 boilerplates, n8n automation blueprints, and developer toolkits.",
+    images: ["https://notion-master-showcase-two.vercel.app/products/26-ai-saas-pro.jpg"],
   },
   verification: {
     google: "googlea25a923901d92933",
   },
+  category: "technology",
 };
 
 export default function RootLayout({

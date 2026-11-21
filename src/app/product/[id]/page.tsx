@@ -74,6 +74,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const baseUrl = 'https://notion-master-showcase-two.vercel.app';
   const pageUrl = `${baseUrl}/product/${product.id}`;
 
+  // Cross-linking: 3 related or complementary digital assets
+  const sameCategory = PRODUCTS.filter((p) => p.id !== product.id && p.category === product.category);
+  const otherProducts = PRODUCTS.filter((p) => p.id !== product.id && p.category !== product.category);
+  const relatedProducts = [...sameCategory, ...otherProducts].slice(0, 3);
+
   // Structured Data (JSON-LD) for Google Rich Snippets
   const jsonLdProduct = {
     '@context': 'https://schema.org',
@@ -493,6 +498,68 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
           </div>
         </div>
+
+        {/* Related Products & Internal Link Graph (Boosts Googlebot Crawl Depth & SEO) */}
+        {relatedProducts.length > 0 && (
+          <section className="mt-16 pt-12 border-t border-slate-200">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                  Related Software Toolkits &amp; Boilerplates
+                </h2>
+                <p className="mt-1 font-mono text-xs text-slate-500">
+                  Production assets frequently engineered together by founders and developers.
+                </p>
+              </div>
+              <Link
+                href="/"
+                className="hidden sm:inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-slate-700 hover:text-slate-900 transition"
+              >
+                <span>View All 26 Assets</span>
+                <span>→</span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {relatedProducts.map((rel) => (
+                <Link
+                  key={rel.id}
+                  href={`/product/${rel.id}`}
+                  className="group relative flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-slate-400 hover:shadow-md transition"
+                >
+                  <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-slate-100 border border-slate-100 mb-3">
+                    <Image
+                      src={rel.image}
+                      alt={rel.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {rel.badge && (
+                      <span className="absolute top-2 left-2 rounded bg-slate-900/90 px-2 py-0.5 font-mono text-[10px] font-semibold text-white backdrop-blur">
+                        {rel.badge}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="font-mono text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+                      {rel.categoryLabel}
+                    </span>
+                    <span className="font-mono text-xs font-bold text-slate-900">
+                      {rel.discountPrice || rel.formattedPrice}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-pink-600 transition line-clamp-1">
+                    {rel.name}
+                  </h3>
+                  <p className="mt-1 font-mono text-xs text-slate-500 line-clamp-2">
+                    {rel.tagline}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       <Footer />

@@ -1,0 +1,138 @@
+# Notion Master Studio — Digital Assets & Software Boilerplates
+
+> Production-grade Next.js 16 boilerplates, n8n AI automation blueprints, Chrome MV3 extensions, and institutional digital kits.
+
+Website: https://notion-master-showcase-two.vercel.app
+Gumroad Store: https://notionmaster001.gumroad.com
+
+## Products & Digital Assets Catalog
+
+### AI SaaS Pro™ ($49)
+- Category: Flagship AI SaaS
+- Tagline: Next.js 16 + React 19 Flagship Multi-Provider AI SaaS Boilerplate with Stripe Credits Ledger
+- URL: https://notion-master-showcase-two.vercel.app/product/ai-saas-pro
+
+### AgentForge n8n v2™ ($0 (FREE))
+- Category: AI Workflows
+- Tagline: 10 Production Claude + Supabase AI Automation Workflows for n8n
+- URL: https://notion-master-showcase-two.vercel.app/product/agentforge-n8n-v2
+
+### SupaForge Edge™ ($49)
+- Category: Serverless Edge AI
+- Tagline: Production Supabase Edge Functions + pgvector Semantic Search & AI Starter Kit
+- URL: https://notion-master-showcase-two.vercel.app/product/supaforge-edge
+
+### SecurityForge AI™ ($47)
+- Category: AI & Security
+- Tagline: 17 Defensive Cursor Rules, Claude Code Harness & Git Pre-Commit Secret Scanner
+- URL: https://notion-master-showcase-two.vercel.app/product/securityforge-ai
+
+### RemoteMCP Pro™ ($47)
+- Category: Cloud & Edge AI
+- Tagline: TypeScript Remote MCP Server on Cloudflare Workers with OAuth2 PKCE
+- URL: https://notion-master-showcase-two.vercel.app/product/remotemcp-pro-cloudflare
+
+### OpenAPI-to-MCP Forge Pro™ ($0 (FREE))
+- Category: Developer Tools
+- Tagline: Production Compiler Engine: Convert Any REST API into FastMCP Python Servers
+- URL: https://notion-master-showcase-two.vercel.app/product/openapi-to-mcp-forge
+
+### CLAUDE.md Master Kit™ ($0 (FREE))
+- Category: AI & Terminal
+- Tagline: 20 Production Architecture Blueprints for Anthropic Claude Code Agent
+- URL: https://notion-master-showcase-two.vercel.app/product/claude-md-master-kit
+
+### CursorForge Pro™ ($0 (FREE))
+- Category: Developer Tools
+- Tagline: 50+ Production AI Coding Rules for Next.js 15, Supabase, Tailwind v4 & Cursor IDE
+- URL: https://notion-master-showcase-two.vercel.app/product/cursorforge-pro-rules
+
+### Vice City Master Vault™ (5-in-1 Suite) ($49)
+- Category: Flagship Bundle
+- Tagline: The Complete Day-1 Launch Arsenal for Gamers & Streamers
+- URL: https://notion-master-showcase-two.vercel.app/product/vice-city-master-vault
+
+### The Founder & Developer Master Suite (4-in-1) ($99)
+- Category: Flagship Bundle
+- Tagline: The Definitive 4-in-1 Institutional Stack to Build, Sign, Operate & Scale
+- URL: https://notion-master-showcase-two.vercel.app/product/master-suite
+
+### NextLaunch AI™ ($49)
+- Category: Full-Stack SaaS
+- Tagline: Production Next.js 15 + Supabase + Stripe AI SaaS Starter Boilerplate
+- URL: https://notion-master-showcase-two.vercel.app/product/nextlaunch-ai
+
+### MCPForge Enterprise™ ($47)
+- Category: AI & MCP Protocols
+- Tagline: Production Model Context Protocol (MCP) Server & 5 Enterprise Tools Pack
+- URL: https://notion-master-showcase-two.vercel.app/product/mcpforge-enterprise
+
+### StackForge™ ($47)
+- Category: DevOps & Cloud
+- Tagline: 3 Production-Ready VPS Stacks (1 Master Multi-Service + 2 Standalone)
+- URL: https://notion-master-showcase-two.vercel.app/product/stackforge-docker
+
+### DirectoryLaunch AI™ ($49)
+- Category: Programmatic SEO
+- Tagline: Next.js 15 Programmatic SEO & Paid Submission Directory Boilerplate
+- URL: https://notion-master-showcase-two.vercel.app/product/directorylaunch-ai
+
+### ExtensionForge MV3™ ($49)
+- Category: Browser Extension
+- Tagline: Chrome Extension Manifest V3 Boilerplate with React 19 & Side Panel API
+- URL: https://notion-master-showcase-two.vercel.app/product/extensionforge-mv3
+
+### WorkflowForge AI™ ($49)
+- Category: AI & Automation
+- Tagline: 20 Production n8n AI Automation Blueprints & Client SOW Kit
+- URL: https://notion-master-showcase-two.vercel.app/product/workflowforge-ai
+
+### ScrapeForge AI™ ($47)
+- Category: Lead Generation
+- Tagline: Python Playwright Anti-Detect Scraper & AI Lead Enrichment Pipeline
+- URL: https://notion-master-showcase-two.vercel.app/product/scrapeforge-ai
+
+### MultiLaunch AI™ ($49)
+- Category: Full-Stack SaaS
+- Tagline: Multi-Model AI Router & Token Credit Studio (Next.js 15, Gemini, Claude, GPT-4o, DeepSeek)
+- URL: https://notion-master-showcase-two.vercel.app/product/multilaunch-ai
+
+### ChatHeist Live™ ($28)
+- Category: Interactive Overlay
+- Tagline: Interactive Twitch & Kick Chat Bank Heist Minigame Overlay Engine
+- URL: https://notion-master-showcase-two.vercel.app/product/chatheist-live
+
+### ConsoleStream Pro™ ($20)
+- Category: Hardware & Calibration
+- Tagline: PS5 & Xbox Capture Card Audio Desync Calibrator & HDR Color Fix for OBS
+- URL: https://notion-master-showcase-two.vercel.app/product/consolestream-pro
+
+### ViceStream Neon Studio™ ($20)
+- Category: OBS Studio Suite
+- Tagline: Hardware-Accelerated 1080p Cyber Neon OBS Broadcast Overlays & Scenes
+- URL: https://notion-master-showcase-two.vercel.app/product/vicestream-neon-studio
+
+### StreamShield Vice™ ($25)
+- Category: Audio & Streaming
+- Tagline: 100% DMCA-Safe Soundboard Engine & Twitch VOD Audio Splitter
+- URL: https://notion-master-showcase-two.vercel.app/product/streamshield-vice
+
+### Vice City 100% Master Companion™ ($15)
+- Category: Gaming & OS
+- Tagline: Dual-Screen Interactive 100% Quest & Collectibles OS (2026 Edition)
+- URL: https://notion-master-showcase-two.vercel.app/product/vice-city-companion
+
+### Notion Business OS™ ($49)
+- Category: Operations
+- Tagline: All-in-One Executive Workspace Template with 5 Relational Databases
+- URL: https://notion-master-showcase-two.vercel.app/product/notion-business-os
+
+### ClientForge™ ($47)
+- Category: Legal & Agency
+- Tagline: High-Ticket Client Acquisition Suite & Attorney-Grade Legal Contract Vault
+- URL: https://notion-master-showcase-two.vercel.app/product/clientforge-kit
+
+### PromptForge AI™ ($47)
+- Category: AI & Prompts
+- Tagline: 525 Battle-Tested Master Prompts Across 8 Revenue Modules + Interactive WebApp
+- URL: https://notion-master-showcase-two.vercel.app/product/promptforge-ai
