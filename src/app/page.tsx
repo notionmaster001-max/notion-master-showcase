@@ -62,7 +62,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Notion Master Studio',
-    url: 'https://notion-master-showcase.vercel.app',
+    url: 'https://notion-master-showcase-two.vercel.app',
     sameAs: ['https://notionmaster001.gumroad.com'],
     description: 'Autonomous Software Boilerplates, Chrome MV3 Extensions & Commercial Digital Toolkits.',
   };
@@ -74,7 +74,7 @@ export default function Home() {
       '@type': 'ListItem',
       position: index + 1,
       name: product.name,
-      url: `https://notion-master-showcase.vercel.app/product/${product.id}`,
+      url: `https://notion-master-showcase-two.vercel.app/product/${product.id}`,
     })),
   };
 
