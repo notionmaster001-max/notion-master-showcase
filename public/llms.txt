@@ -4,6 +4,13 @@
 
 Website: https://notion-master-showcase-two.vercel.app
 Gumroad Store: https://notionmaster001.gumroad.com
+Free Developer Hub: https://notion-master-showcase-two.vercel.app/freebies
+Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
+
+## Key Engineering Guides
+- Multi-Provider Failover AI SaaS in Next.js 16: https://notion-master-showcase-two.vercel.app/guides/nextjs-16-multi-provider-ai-saas
+- 10 Production Claude 3.5 Sonnet n8n Workflows: https://notion-master-showcase-two.vercel.app/guides/n8n-claude-ai-agent-automation
+- Monetizing Chrome Extensions with Manifest V3: https://notion-master-showcase-two.vercel.app/guides/chrome-extension-manifest-v3-react-tailwind
 
 ## Products & Digital Assets Catalog
 
