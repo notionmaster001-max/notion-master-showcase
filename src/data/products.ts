@@ -2,6 +2,142 @@ import { Product } from '../types';
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'tokenaudit-kit',
+    num: '27',
+    name: 'TokenAudit Kit™',
+    tagline: '100% Offline AI Coding Cost & Token Waste Auditor for Claude Code, Cursor, OpenAI & DeepSeek',
+    category: 'automation',
+    categoryLabel: 'AI FinOps & Optimization',
+    price: 49,
+    formattedPrice: '$49',
+    originalValue: '$149',
+    discountPrice: '$39.20',
+    gumroadUrl: 'https://notionmaster001.gumroad.com/l/tokenaudit-kit/LAUNCH20',
+    gumroadId: 'NThGP4pB-LlEeadrL-bquQ==',
+    image: '/products/27-tokenaudit-kit.jpg',
+    galleryImages: ['/products/27-tokenaudit-kit.jpg'],
+    version: 'v1.0 Production Release',
+    folder: 'tokenaudit-pro-kit',
+    badge: 'AI Bill-Cutter',
+    rating: 4.9,
+    reviewsCount: 32,
+    techStack: [
+      'Node.js 18+ (Zero External Dependencies)',
+      '100% Offline Visual Dashboard (HTML/JS)',
+      'Chart.js & Tailwind CSS',
+      'GitHub Actions CI Budget Gate Workflow',
+      'November 2026 Model Pricing Engine',
+      'CFO FinOps CSV & Markdown Exporters'
+    ],
+    deliverables: [
+      '100% Offline Visual Dashboard (tokenaudit-pro-dashboard.html) with interactive cost simulator',
+      'Flagship-to-Fast Model Routing ROI Simulator (Opus 5.5 / Astra to Sonnet 5.5 / Haiku 5.5)',
+      'Runaway 80K+ prompt bloat inspector with session telemetry',
+      'Ready-to-drop GitHub Actions CI Workflow budget gate (.github/workflows/tokenaudit-budget-gate.yml)',
+      'CFO & Accountant-ready CSV and Markdown expense report generator',
+      'TokenAudit Lite CLI source package (tokenaudit-lite-github.zip, MIT License)',
+      'Complete November 2026 pricing database (pricing-2026.json)'
+    ],
+    description: 'Stop burning $10–$20/day in hidden AI coding overages. TokenAudit Kit audits your local Claude Code, Cursor, OpenAI, Gemini, and DeepSeek logs in 2 seconds — pinpointing uncached prompt loops, overkill flagship calls, and exact recoverable savings with 100% offline privacy.',
+    highlights: [
+      '100% Offline & Private: Zero telemetry, zero external API requests. Code and logs never leave your device',
+      'Detects uncached context loops exceeding 80K tokens and recommends instant prompt caching fixes',
+      'Interactive ROI slider demonstrates exact monthly dollar savings from model down-routing',
+      'Hard USD budget gate blocks CI pull requests if token spend exceeds safety thresholds'
+    ],
+    metaTitle: 'TokenAudit Kit™ — AI Coding Cost & Token Waste Auditor for Claude Code & Cursor',
+    metaDescription: 'Slash Claude Code & Cursor token overages by 50%–80%. 100% offline local dashboard, zero-dependency Node.js CLI, and GitHub Actions CI budget blocker.',
+    seoKeywords: [
+      'tokenaudit kit',
+      'claude code token cost calculator',
+      'cursor token overage tracker',
+      'ai coding cost optimization',
+      'reduce llm token bill',
+      'prompt caching roi simulator'
+    ],
+    faqs: [
+      {
+        question: 'Does TokenAudit upload my code or session transcripts to any server?',
+        answer: 'Never. TokenAudit is 100% offline. The dashboard runs directly in your local browser (file://) and the CLI runs locally. Zero external network calls are made.'
+      },
+      {
+        question: 'What log formats are supported out of the box?',
+        answer: 'Claude Code JSONL session logs, Cursor IDE billing CSV exports, OpenAI JSON/JSONL usage arrays, and DeepSeek/Gemini API responses.'
+      },
+      {
+        question: 'Can I enforce a hard USD budget in our team CI/CD pipeline?',
+        answer: 'Yes! The kit includes a pre-configured GitHub Actions workflow (.github/workflows/tokenaudit-budget-gate.yml) that automatically parses logs and fails PRs with exit code 1 if budget limits are crossed.'
+      }
+    ],
+    systemRequirements: [
+      'Node.js 18+ (Zero external npm dependencies required)',
+      'Any modern web browser (Chrome, Brave, Edge, Firefox, Safari)',
+      'Local JSONL, JSON, or CSV log files from Claude Code, Cursor, or OpenAI'
+    ]
+  },
+  {
+    id: 'tokenaudit-lite',
+    num: '28',
+    name: 'TokenAudit Lite™ (Free CLI)',
+    tagline: 'Zero-Dependency Local Node.js CLI to Audit Claude Code & Cursor Token Spend',
+    category: 'automation',
+    categoryLabel: 'Developer Tools',
+    price: 0,
+    formattedPrice: '$0 FREE',
+    originalValue: '$49',
+    discountPrice: '$0 (Instant Download)',
+    gumroadUrl: '/downloads/tokenaudit-lite-github.zip',
+    gumroadId: 'free-tokenaudit-lite',
+    image: '/products/27-tokenaudit-kit.jpg',
+    galleryImages: ['/products/27-tokenaudit-kit.jpg'],
+    version: 'v1.0 MIT Open Source',
+    folder: 'tokenaudit-lite-github',
+    badge: '100% Free CLI',
+    rating: 5.0,
+    reviewsCount: 19,
+    techStack: [
+      'Node.js 18+ (Zero External Dependencies)',
+      '100% Offline Local CLI',
+      'JSONL / JSON / CSV Log Parsers',
+      'November 2026 Model Pricing Engine',
+      'CLI CI Budget Gate Exit Codes'
+    ],
+    deliverables: [
+      'Zero-dependency executable CLI (bin/tokenaudit.js)',
+      'Support for Claude Code JSONL, Cursor CSV, and OpenAI JSON logs',
+      'November 2026 token pricing engine (pricing-2026.json)',
+      'Sample telemetry datasets for instant verification',
+      'MIT Perpetual Open Source License'
+    ],
+    description: 'Audit your AI coding spend in 2 seconds. Zero-dependency, 100% offline CLI that analyzes your Claude Code, Cursor, and OpenAI API usage logs, flagging uncached prompt bloat and overkill flagship model calls.',
+    highlights: [
+      'Zero npm install required: runs natively on Node.js 18+',
+      '100% Private & Offline: Zero network calls or external data transfers',
+      'Flags >80K uncached token loops and estimates recoverable savings',
+      'Instant terminal report with breakdown by model and cache hit ratio'
+    ],
+    metaTitle: 'TokenAudit Lite™ — Free Claude Code & Cursor Token Cost Auditor CLI',
+    metaDescription: 'Free zero-dependency CLI to audit AI token spend in Claude Code & Cursor logs. Detect uncached prompt bloat and calculate recoverable savings.',
+    seoKeywords: [
+      'free tokenaudit lite',
+      'free claude code token auditor',
+      'free cursor cost tracker',
+      'open source ai cost cli',
+      'token audit nodejs'
+    ],
+    faqs: [
+      {
+        question: 'How do I run TokenAudit Lite?',
+        answer: 'Unzip the download and run: node bin/tokenaudit.js analyze <path-to-your-log-file>'
+      },
+      {
+        question: 'Does it require an internet connection or API keys?',
+        answer: 'No. It runs 100% offline without any API keys or network dependencies.'
+      }
+    ],
+    systemRequirements: ['Node.js 18+']
+  },
+  {
     id: 'ai-saas-pro',
     num: '26',
     name: 'AI SaaS Pro™',

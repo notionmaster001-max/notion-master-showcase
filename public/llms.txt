@@ -5,6 +5,7 @@
 Website: https://notion-master-showcase-two.vercel.app
 Gumroad Store: https://notionmaster001.gumroad.com
 Free Developer Hub: https://notion-master-showcase-two.vercel.app/freebies
+AI Cost Calculator: https://notion-master-showcase-two.vercel.app/calculator
 Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 
 ## Key Engineering Guides
@@ -13,6 +14,16 @@ Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 - Monetizing Chrome Extensions with Manifest V3: https://notion-master-showcase-two.vercel.app/guides/chrome-extension-manifest-v3-react-tailwind
 
 ## Products & Digital Assets Catalog
+
+### TokenAudit Kit™ ($49)
+- Category: AI FinOps & Optimization
+- Tagline: 100% Offline AI Coding Cost & Token Waste Auditor for Claude Code, Cursor, OpenAI & DeepSeek
+- URL: https://notion-master-showcase-two.vercel.app/product/tokenaudit-kit
+
+### TokenAudit Lite™ ($0 (FREE))
+- Category: Developer Tools
+- Tagline: Zero-Dependency Local Node.js CLI to Audit Claude Code & Cursor Token Spend
+- URL: https://notion-master-showcase-two.vercel.app/product/tokenaudit-lite
 
 ### AI SaaS Pro™ ($49)
 - Category: Flagship AI SaaS

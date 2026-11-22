@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
           </div>
         </Link>
 
-        {/* Center Nav: Catalog, Free Tools, Guides */}
+        {/* Center Nav: Catalog, Free Tools, Guides, Calculator */}
         <nav className="hidden md:flex items-center gap-6 font-mono text-xs font-medium text-slate-600">
           <Link href="/" className="hover:text-slate-900 transition">
             Catalog
@@ -38,7 +38,11 @@ export const Header: React.FC = () => {
           <Link href="/freebies" className="flex items-center gap-1.5 text-emerald-700 font-semibold hover:text-emerald-800 transition">
             <span>🎁</span>
             <span>Free Tools</span>
-            <span className="rounded-full bg-emerald-100 px-1.5 py-0.2 text-[9px] font-bold text-emerald-800">4 FREE</span>
+            <span className="rounded-full bg-emerald-100 px-1.5 py-0.2 text-[9px] font-bold text-emerald-800">5 FREE</span>
+          </Link>
+          <Link href="/calculator" className="flex items-center gap-1.5 text-pink-600 font-semibold hover:text-pink-700 transition">
+            <span>⚡</span>
+            <span>Cost Calculator</span>
           </Link>
           <Link href="/guides" className="flex items-center gap-1.5 hover:text-slate-900 transition">
             <span>📚</span>
@@ -58,7 +62,7 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="font-mono text-xs font-medium text-slate-600">
-              26 Verified Systems Live
+              28 Verified Systems Live
             </span>
           </div>
 
