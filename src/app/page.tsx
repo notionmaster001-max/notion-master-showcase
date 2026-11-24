@@ -29,8 +29,8 @@ export default function Home() {
       automation: PRODUCTS.filter((p) => p.category === 'automation').length,
       agency: PRODUCTS.filter((p) => p.category === 'agency').length,
       growth: PRODUCTS.filter((p) => p.category === 'growth').length,
-      bundle: PRODUCTS.filter((p) => p.category === 'bundle' || p.id === 'vice-city-master-vault').length,
-      gaming: PRODUCTS.filter((p) => p.category === 'gaming').length,
+      bundle: PRODUCTS.filter((p) => p.category === 'bundle').length,
+      gaming: 0,
     };
   }, []);
 
@@ -38,9 +38,7 @@ export default function Home() {
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
       // Category filter
-      if (activeCategory === 'bundle' && (product.category === 'bundle' || product.id === 'vice-city-master-vault')) {
-        // Allow master bundle under both categories
-      } else if (activeCategory !== 'all' && product.category !== activeCategory) {
+      if (activeCategory !== 'all' && product.category !== activeCategory) {
         return false;
       }
       // Search query filter
@@ -126,8 +124,8 @@ export default function Home() {
               </h1>
 
               <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                Engineered for full-stack developers, agency founders, and digital creators. Tested Next.js 15 source code, 
-                Chrome MV3 extensions, production n8n workflows, and next-gen creator streaming engines (GTA 6, OBS overlays, soundboards). 
+                Engineered for full-stack developers, agency founders, and AI builders. Tested Next.js 16 source code, 
+                Supabase pgvector architectures, Chrome MV3 extensions, and production n8n workflows. 
                 All assets include perpetual commercial licenses for unlimited deployments.
               </p>
 
@@ -190,70 +188,9 @@ export default function Home() {
               counts={counts}
             />
 
-            {/* Flagship Bundle Urgency & Launch Discount Banner (Recommendation 2) */}
-            {(activeCategory === 'all' || activeCategory === 'gaming' || activeCategory === 'bundle') && !searchQuery && (
-              <div className="mt-8 rounded-2xl border-2 border-pink-500/50 bg-gradient-to-r from-slate-950 via-[#131127] to-slate-950 p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-96 h-full bg-gradient-to-l from-pink-500/10 via-purple-500/10 to-transparent pointer-events-none" />
-                <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-                  <div className="max-w-2xl">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-pink-500/20 border border-pink-500/40 px-3 py-1 font-mono text-xs font-bold text-pink-300">
-                      <span className="h-2 w-2 rounded-full bg-pink-400 animate-pulse" />
-                      <span>DAY-1 CONSOLE LAUNCH BUNDLE · 55% OFF SPECIAL</span>
-                    </div>
-                    <h2 className="mt-3 font-sans text-2xl sm:text-3xl font-black tracking-tight text-white">
-                      Vice City Master Vault™ (5-in-1 Commercial Suite)
-                    </h2>
-                    <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-                      All 5 standalone GTA 6 creator engines in one flagship archive: Companion Quest Tracker + StreamShield Audio Soundboard + ViceStream Neon Studio + ConsoleStream Pro Calibrator + ChatHeist Live IRC Minigame.
-                    </p>
-                    <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-xs text-slate-300">
-                      <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
-                        <span>✓</span> 5 Commercial Systems
-                      </div>
-                      <span>·</span>
-                      <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
-                        <span>✓</span> Individual Value: $107.95
-                      </div>
-                      <span>·</span>
-                      <div className="flex items-center gap-1.5 text-pink-400 font-bold">
-                        <span>✓</span> You Save: $58.95
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Pricing & Checkout Card (Recommendation 3: No-Friction Checkout) */}
-                  <div className="w-full lg:w-auto shrink-0 bg-slate-900/90 border border-slate-800 rounded-xl p-5 text-center flex flex-col items-center gap-3">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-white">$49.00</span>
-                      <span className="font-mono text-xs text-slate-400">USD</span>
-                      <span className="text-sm font-mono text-slate-500 line-through">$107.95</span>
-                    </div>
-                    <span className="rounded bg-pink-500/20 border border-pink-500/30 px-2 py-0.5 font-mono text-[10px] font-bold text-pink-300">
-                      SAVE 55% TODAY
-                    </span>
-                    <a
-                      href="https://notionmaster001.gumroad.com/l/kwhfsp/LAUNCH20"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-gumroad-single-product="true"
-                      className="gumroad-button flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 px-6 py-3 font-sans text-xs font-black text-white shadow-lg hover:brightness-110 transition w-full"
-                    >
-                      <span>Claim 5-in-1 Master Vault ($39.20 with LAUNCH20)</span>
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </a>
-                    <p className="font-mono text-[10px] text-slate-400">
-                      ⚡ Instant ZIP Download · Commercial Rights
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
             {/* Product Cards Grid */}
             {filteredProducts.length > 0 ? (
-              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {filteredProducts.map((product) => (
                   <ProductCard
                     key={product.id}

@@ -18,7 +18,6 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
 }) => {
   const tabs: { key: CategoryFilter; label: string }[] = [
     { key: 'all', label: 'All Products' },
-    { key: 'gaming', label: 'GTA 6 & Creator Suite' },
     { key: 'saas', label: 'Full-Stack SaaS' },
     { key: 'automation', label: 'AI & Automations' },
     { key: 'agency', label: 'Operations & Legal' },
@@ -40,7 +39,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             type="text"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search boilerplates, GTA 6 tools, OBS overlays, Next.js, n8n, Stripe..."
+            placeholder="Search AI tools, Next.js 16, Supabase, Cursor rules, n8n, Stripe..."
             className="w-full rounded-md border border-slate-300 bg-white py-2 pl-9 pr-3 text-xs text-slate-900 placeholder-slate-400 shadow-sm transition focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
           />
           {searchQuery && (
@@ -54,7 +53,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono text-slate-500">
-          <span>Showing <strong className="text-slate-900 font-semibold">{counts[activeCategory]}</strong> systems</span>
+          <span>Showing <strong className="text-slate-900 font-semibold">{counts[activeCategory] || 0}</strong> systems</span>
           <span>·</span>
           <span>Instant Download</span>
         </div>
@@ -64,7 +63,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
       <div className="flex flex-wrap items-center gap-1.5 border-b border-slate-200 pb-3">
         {tabs.map((tab) => {
           const isActive = activeCategory === tab.key;
-          const count = counts[tab.key];
+          const count = counts[tab.key] || 0;
           return (
             <button
               key={tab.key}
