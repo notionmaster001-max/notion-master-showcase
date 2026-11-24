@@ -201,13 +201,13 @@ export default function AiCostCalculatorPage() {
             {/* Action Buttons */}
             <div className="space-y-3 pt-4 border-t border-slate-800">
               <a
-                href="https://notionmaster001.gumroad.com/l/tokenaudit-kit/LAUNCH20"
+                href="https://notionmaster001.gumroad.com/l/tokenaudit-kit/EARLYBIRD"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-gumroad-single-product="true"
                 className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-pink-600 py-3.5 px-4 font-mono text-xs font-bold text-white hover:bg-pink-500 transition shadow-lg"
               >
-                <span>Get TokenAudit Pro — $39.20 (Save ${annualSavings.toFixed(0)}/yr)</span>
+                <span>Get TokenAudit Pro — $24.50 (50% Off Early Bird)</span>
                 <span>→</span>
               </a>
 
