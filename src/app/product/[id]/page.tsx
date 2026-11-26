@@ -89,13 +89,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     operatingSystem: 'All (Node.js, Web, Python, Cloud)',
     image: `${baseUrl}${product.image}`,
     url: pageUrl,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: product.rating.toFixed(1),
-      reviewCount: product.reviewsCount,
-      bestRating: '5',
-      worstRating: '1',
-    },
     offers: {
       '@type': 'Offer',
       price: product.price,
@@ -389,24 +382,17 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <h1 className="font-sans text-2xl font-bold tracking-tight text-slate-900">
                 {product.name}
               </h1>
-              <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+              <p className="mt-1.5 text-xs text-zinc-600 leading-relaxed">
                 {product.tagline}
               </p>
 
-              {/* Individual Realistic Star Rating Bar */}
-              <div className="mt-3 flex items-center gap-2 border-b border-slate-100 pb-4">
-                <div className="flex items-center text-amber-500">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="font-mono text-xs font-bold text-slate-900">
-                  {product.rating.toFixed(1)} / 5.0
+              {/* Technical Spec Pill */}
+              <div className="mt-3 flex flex-wrap items-center gap-2 border-b border-zinc-100 pb-4">
+                <span className="rounded-md border border-zinc-200 bg-zinc-50 px-2.5 py-0.5 font-mono text-[11px] text-zinc-700">
+                  {product.version}
                 </span>
-                <span className="font-mono text-[11px] text-slate-500">
-                  ({product.reviewsCount} verified developer reviews)
+                <span className="font-mono text-[11px] text-zinc-500">
+                  Commercial License Included
                 </span>
               </div>
 
@@ -414,39 +400,43 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <div className="my-5 flex items-baseline justify-between">
                 <div>
                   <div className="flex items-baseline gap-2 flex-wrap">
-                    <span className="font-sans text-3xl font-black text-pink-600">
-                      {product.discountPrice || product.formattedPrice}
+                    <span className="font-sans text-3xl font-semibold text-zinc-950">
+                      {product.price === 0 ? 'Free' : product.formattedPrice}
                     </span>
-                    <span className="font-mono text-xs uppercase tracking-wider text-slate-500">USD</span>
-                    <span className="text-base text-slate-400 line-through">
-                      {product.formattedPrice}
-                    </span>
-                    <span className="rounded bg-pink-100 border border-pink-200 px-2 py-0.5 font-mono text-[10px] font-bold text-pink-700">
-                      20% OFF
+                    <span className="font-mono text-xs uppercase tracking-wider text-zinc-500">
+                      {product.price === 0 ? 'MIT / Open Access' : 'USD · One-time'}
                     </span>
                   </div>
-                  <p className="font-mono text-[11px] text-emerald-600 font-semibold mt-1">
-                    🎉 Code LAUNCH20 auto-applied at checkout
-                  </p>
                 </div>
-                <span className="rounded bg-emerald-50 px-2 py-1 font-mono text-[10px] font-semibold text-emerald-700 border border-emerald-200">
-                  Instant Download
+                <span className="rounded-md bg-zinc-100 px-2.5 py-1 font-mono text-[10px] font-medium text-zinc-700 border border-zinc-200">
+                  Instant Access
                 </span>
               </div>
 
-              {/* Direct Gumroad 1-Click Purchase Button */}
+              {/* Direct Gumroad Checkout Button */}
               <a
                 href={product.gumroadUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-gumroad-single-product="true"
-                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-slate-900 py-3.5 px-4 text-xs font-bold text-white shadow-md hover:bg-slate-800 transition"
+                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-xl bg-zinc-950 py-3.5 px-4 text-xs font-medium text-white shadow-xs hover:bg-zinc-800 transition"
               >
-                <span>Instant Checkout on Gumroad ({product.discountPrice || product.formattedPrice})</span>
+                <span>
+                  {product.price === 0
+                    ? 'Download Free ($0)'
+                    : `Get Source & Guide (${product.formattedPrice})`}
+                </span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
+
+              <Link
+                href="/#hire"
+                className="mt-2.5 flex w-full items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 py-2.5 px-4 text-xs font-medium text-zinc-800 hover:bg-zinc-100 transition"
+              >
+                Need custom setup for your team? ($65–$175) →
+              </Link>
 
               {/* Institutional Guarantees */}
               <div className="mt-5 space-y-2 pt-4 border-t border-slate-100 text-xs font-mono text-slate-600">

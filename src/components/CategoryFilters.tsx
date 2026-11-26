@@ -59,8 +59,8 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
         </div>
       </div>
 
-      {/* Category Pills */}
-      <div className="flex flex-wrap items-center gap-1.5 border-b border-slate-200 pb-3">
+      {/* Category Pills — Single-Row Swipeable on Mobile */}
+      <div className="no-scrollbar flex flex-nowrap overflow-x-auto sm:flex-wrap items-center gap-1.5 border-b border-zinc-200 pb-3">
         {tabs.map((tab) => {
           const isActive = activeCategory === tab.key;
           const count = counts[tab.key] || 0;
@@ -68,18 +68,18 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             <button
               key={tab.key}
               onClick={() => onSelectCategory(tab.key)}
-              className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition ${
+              className={`inline-flex shrink-0 whitespace-nowrap items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition cursor-pointer ${
                 isActive
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 hover:text-slate-900'
+                  ? 'bg-zinc-950 text-white shadow-xs'
+                  : 'bg-white text-zinc-600 border border-zinc-200 hover:bg-zinc-50 hover:text-zinc-950'
               }`}
             >
               <span>{tab.label}</span>
               <span
                 className={`rounded px-1.5 py-0.2 font-mono text-[10px] ${
                   isActive
-                    ? 'bg-slate-800 text-slate-200'
-                    : 'bg-slate-100 text-slate-600 border border-slate-200'
+                    ? 'bg-zinc-800 text-zinc-200'
+                    : 'bg-zinc-100 text-zinc-600 border border-zinc-200'
                 }`}
               >
                 {count}

@@ -4,9 +4,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://notion-master-showcase-two.vercel.app"),
-  title: "Notion Master Studio — Institutional Software Boilerplates & Digital Assets",
-  description: "Production-grade Next.js 16 boilerplates, n8n automation blueprints, Chrome MV3 extensions, and high-ticket client acquisition systems for developers and agency founders.",
-  keywords: ["Next.js 16 boilerplate", "React 19 SaaS starter", "Chrome Extension MV3", "n8n automation blueprints", "Python lead scraper", "Client contracts", "Supabase edge functions", "MCP server"],
+  title: "Notion Master Studio — Custom Notion Systems, n8n Automations & Web Engineering",
+  description: "Productized Notion workspaces, n8n workflow automations, API integrations, and Next.js web builds for agencies, clinics, and indie operators.",
+  keywords: ["custom notion system", "n8n workflow automation developer", "zapier to n8n migration", "gumroad airtable sync", "Next.js 16 boilerplate", "Notion CRM setup"],
   alternates: {
     canonical: "https://notion-master-showcase-two.vercel.app",
   },

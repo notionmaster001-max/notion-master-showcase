@@ -146,7 +146,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   We guarantee that every codebase strictly compiles with 0 errors in its specified environment (e.g., Node.js 18+ for NextLaunch AI, Python 3.10+ for ScrapeForge AI). If you encounter any genuine compiler defect, broken link, or corrupted archive:
                 </p>
                 <ol className="list-decimal pl-5 space-y-1 text-slate-600">
-                  <li>Contact our dedicated engineering desk at <span className="font-mono text-slate-900 font-semibold">support@notionmasterstudio.com</span>.</li>
+                  <li>Contact our engineering desk directly at <span className="font-mono text-slate-900 font-semibold">notionmaster001@gmail.com</span>.</li>
                   <li>Our software engineers will diagnose the issue and provide a verified patch or replacement within 24 business hours.</li>
                   <li>If an irremediable defect in our deliverables prevents the system from functioning as documented, a full refund will be processed promptly.</li>
                 </ol>

@@ -48,8 +48,8 @@ export default function AiCostCalculatorPage() {
       <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Hero Lockup */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full border border-pink-200 bg-pink-50 px-3 py-1 font-mono text-xs text-pink-700 font-bold mb-4">
-            <span>⚡ AI Coding Bill-Cutter · November 2026 API Rates</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 font-mono text-xs text-zinc-700 font-medium mb-4">
+            <span>AI Coding Bill Estimator · November 2026 API Rates</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 leading-tight">
             AI Coding Cost &amp; Token Waste Calculator
@@ -205,9 +205,9 @@ export default function AiCostCalculatorPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-gumroad-single-product="true"
-                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-pink-600 py-3.5 px-4 font-mono text-xs font-bold text-white hover:bg-pink-500 transition shadow-lg"
+                className="gumroad-button flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 px-4 font-mono text-xs font-semibold text-zinc-950 hover:bg-zinc-100 transition shadow-sm"
               >
-                <span>Get TokenAudit Pro — $24.50 (50% Off Early Bird)</span>
+                <span>Get TokenAudit Pro — $24.50</span>
                 <span>→</span>
               </a>
 

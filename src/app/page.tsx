@@ -1,13 +1,17 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
+import { ArrowRight, Code2, Mail, Sparkles } from 'lucide-react';
 import { Header } from '../components/Header';
+import { ServicesSection } from '../components/ServicesSection';
+import { VerifiedWorkSection } from '../components/VerifiedWorkSection';
+import { InquirySection } from '../components/InquirySection';
 import { CategoryFilters } from '../components/CategoryFilters';
 import { ProductCard } from '../components/ProductCard';
 import { ProductModal } from '../components/ProductModal';
 import { LivePreviewModal } from '../components/LivePreviewModal';
 import { LegalModal } from '../components/LegalModal';
-import { TestimonialsSection } from '../components/TestimonialsSection';
 import { EngineeringStandards } from '../components/EngineeringStandards';
 import { FAQSection } from '../components/FAQSection';
 import { Footer } from '../components/Footer';
@@ -20,8 +24,8 @@ export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedLivePreview, setSelectedLivePreview] = useState<Product | null>(null);
   const [legalModalType, setLegalModalType] = useState<LegalDocType | null>(null);
+  const [selectedTier, setSelectedTier] = useState<string>('Full Custom System Setup ($175)');
 
-  // Category counts
   const counts = useMemo(() => {
     return {
       all: PRODUCTS.length,
@@ -34,14 +38,11 @@ export default function Home() {
     };
   }, []);
 
-  // Filtered products
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
-      // Category filter
       if (activeCategory !== 'all' && product.category !== activeCategory) {
         return false;
       }
-      // Search query filter
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const inName = product.name.toLowerCase().includes(q);
@@ -54,26 +55,18 @@ export default function Home() {
     });
   }, [activeCategory, searchQuery]);
 
-  const bundleProduct = PRODUCTS.find((p) => p.id === 'master-suite');
-
   const jsonLdOrg = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'ProfessionalService',
     name: 'Notion Master Studio',
     url: 'https://notion-master-showcase-two.vercel.app',
-    sameAs: ['https://notionmaster001.gumroad.com'],
-    description: 'Autonomous Software Boilerplates, Chrome MV3 Extensions & Commercial Digital Toolkits.',
-  };
-
-  const jsonLdItemList = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: PRODUCTS.map((product, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: product.name,
-      url: `https://notion-master-showcase-two.vercel.app/product/${product.id}`,
-    })),
+    email: 'notionmaster001@gmail.com',
+    sameAs: [
+      'https://github.com/notionmaster001-max',
+      'https://notionmaster001.gumroad.com',
+    ],
+    description:
+      'Custom Notion operating systems, n8n workflow automation, API integrations, and production Next.js web builds.',
   };
 
   const jsonLdWebSite = {
@@ -81,19 +74,10 @@ export default function Home() {
     '@type': 'WebSite',
     name: 'Notion Master Studio',
     url: 'https://notion-master-showcase-two.vercel.app',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://notion-master-showcase-two.vercel.app/?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Schema.org Organization, WebSite & ItemList Structured Data */}
+    <div className="min-h-screen bg-white text-zinc-950">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
@@ -102,84 +86,123 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdItemList) }}
-      />
 
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="border-b border-slate-200 bg-white py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Client-First Apple/Linear Hero (Crisp First-Screen Fit on Mobile) */}
+        <section className="border-b border-zinc-200 bg-white py-10 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 rounded border border-slate-200 bg-slate-50 px-2.5 py-1 font-mono text-[11px] text-slate-700">
-                <span className="h-1.5 w-1.5 rounded-full bg-slate-900"></span>
-                <span>NOTION MASTER STUDIO · OFFICIAL CATALOG 2026</span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[10px] sm:text-[11px] font-medium tracking-wide text-zinc-700">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span>NOTION SYSTEMS · N8N AUTOMATION · NEXT.JS</span>
               </div>
 
-              <h1 className="mt-4 font-sans text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                Commercial Software Boilerplates & Creator Toolkits
+              <h1 className="mt-4 sm:mt-5 text-[28px] leading-[1.14] font-semibold tracking-tight text-zinc-950 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+                Custom Notion systems, n8n automations &amp; Next.js builds.
               </h1>
 
-              <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                Engineered for full-stack developers, agency founders, and AI builders. Tested Next.js 16 source code, 
-                Supabase pgvector architectures, Chrome MV3 extensions, and production n8n workflows. 
-                All assets include perpetual commercial licenses for unlimited deployments.
+              <p className="mt-3.5 sm:mt-5 text-sm sm:text-lg leading-relaxed text-zinc-600 max-w-2xl">
+                We help agencies, clinics, founders, and solo operators replace repetitive manual work with reliable Notion workspaces, API-to-Airtable pipelines, and fast web tools—delivered with full source ownership.
               </p>
 
-              {/* Social Proof Trust Strip */}
-              <div className="mt-5 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-600">
-                <div className="flex items-center text-amber-500">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              {/* Full-width Crisp Mobile CTAs, Inline on Desktop */}
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3">
+                <a
+                  href="#hire"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-zinc-950 px-5 py-3 text-sm font-medium text-white shadow-xs transition hover:bg-zinc-800"
+                >
+                  <span>Start with a $65 Starter Fix</span>
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+
+                <div className="grid grid-cols-2 sm:flex items-center gap-2.5 sm:gap-3">
+                  <a
+                    href="#services"
+                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium text-zinc-800 transition hover:bg-zinc-50"
+                  >
+                    View Scopes
+                  </a>
+
+                  <a
+                    href="#catalog"
+                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 sm:border-transparent bg-zinc-50 sm:bg-transparent px-3 py-2.5 sm:py-2 text-xs font-medium text-zinc-600 hover:text-zinc-950 transition"
+                  >
+                    {PRODUCTS.length} Ready Kits ↓
+                  </a>
                 </div>
-                <span className="font-bold text-slate-900">4.3 / 5.0 Rating</span>
-                <span>·</span>
-                <span>350+ Verified Global Reviews</span>
-                <span>·</span>
-                <span className="text-emerald-700 font-semibold">100% Compiler Clean</span>
               </div>
             </div>
 
-            {/* Metrics Bar */}
-            <div className="mt-8 grid grid-cols-2 gap-3 border-t border-slate-200 pt-8 sm:grid-cols-4 sm:gap-4">
-              <div className="rounded border border-slate-200 bg-slate-50/60 p-3.5">
-                <div className="font-mono text-xl font-bold text-slate-900">{PRODUCTS.length}</div>
-                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-500 mt-0.5">
-                  Live Production Systems
+            {/* 100% Verifiable Studio Proof Metrics */}
+            <div className="mt-8 sm:mt-14 grid grid-cols-2 gap-4 border-t border-zinc-200 pt-6 sm:pt-8 sm:grid-cols-4">
+              <div>
+                <div className="text-lg sm:text-2xl font-semibold tracking-tight text-zinc-950">
+                  48 Hours
+                </div>
+                <div className="mt-0.5 text-[11px] sm:text-xs text-zinc-500">
+                  Turnaround for starter fixes
                 </div>
               </div>
-              <div className="rounded border border-slate-200 bg-slate-50/60 p-3.5">
-                <div className="font-mono text-xl font-bold text-slate-900">100%</div>
-                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-500 mt-0.5">
-                  Compiler & CRC Verified
+              <div>
+                <div className="text-lg sm:text-2xl font-semibold tracking-tight text-zinc-950">
+                  {PRODUCTS.length} Systems
+                </div>
+                <div className="mt-0.5 text-[11px] sm:text-xs text-zinc-500">
+                  Architectures ready to adapt
                 </div>
               </div>
-              <div className="rounded border border-pink-200 bg-pink-50/60 p-3.5">
-                <div className="font-mono text-xl font-bold text-pink-600">$11.99 – $39.20</div>
-                <div className="font-mono text-[11px] uppercase tracking-wider text-pink-700 font-semibold mt-0.5">
-                  20% Launch Discount Active
+              <div>
+                <div className="text-lg sm:text-2xl font-semibold tracking-tight text-zinc-950">
+                  VS Code + Notion
+                </div>
+                <div className="mt-0.5 text-[11px] sm:text-xs text-zinc-500">
+                  Published extensions &amp; OS
                 </div>
               </div>
-              <div className="rounded border border-slate-200 bg-slate-50/60 p-3.5">
-                <div className="font-mono text-xl font-bold text-slate-900">Commercial</div>
-                <div className="font-mono text-[11px] uppercase tracking-wider text-slate-500 mt-0.5">
-                  Unlimited Client Rights
+              <div>
+                <div className="text-lg sm:text-2xl font-semibold tracking-tight text-zinc-950">
+                  100% Yours
+                </div>
+                <div className="mt-0.5 text-[11px] sm:text-xs text-zinc-500">
+                  Zero vendor lock-in
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Catalog Section */}
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {/* Filters */}
+        <ServicesSection onSelectTier={setSelectedTier} />
+        <VerifiedWorkSection />
+        <InquirySection preselectedTier={selectedTier} />
+
+        {/* Pre-Built Toolkits Store: 2 Cards Per Row on Mobile, 3 on Tablet, 4 Compact on Desktop */}
+        <section id="catalog" className="bg-white py-12 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[10px] sm:text-[11px] font-medium tracking-wide text-zinc-600">
+                  <Code2 className="h-3.5 w-3.5 text-zinc-900" />
+                  <span>SELF-SERVE TOOLKITS &amp; BLUEPRINTS</span>
+                </div>
+                <h2 className="mt-3 sm:mt-4 text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
+                  Ready-to-Deploy Toolkits &amp; Free Utilities
+                </h2>
+                <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-zinc-600">
+                  Grab any self-serve boilerplate or free blueprint below, or hire us to integrate it directly into your stack.
+                </p>
+              </div>
+
+              <Link
+                href="/freebies"
+                className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-medium text-zinc-800 hover:bg-zinc-100 transition"
+              >
+                <Sparkles className="h-3.5 w-3.5 text-zinc-600" />
+                <span>Explore Free Tools ($0) →</span>
+              </Link>
+            </div>
+
             <CategoryFilters
               activeCategory={activeCategory}
               onSelectCategory={setActiveCategory}
@@ -188,9 +211,8 @@ export default function Home() {
               counts={counts}
             />
 
-            {/* Product Cards Grid */}
             {filteredProducts.length > 0 ? (
-              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
                 {filteredProducts.map((product) => (
                   <ProductCard
                     key={product.id}
@@ -201,112 +223,65 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              <div className="mt-12 rounded-lg border border-slate-200 bg-slate-50 p-12 text-center">
-                <p className="font-sans text-sm font-semibold text-slate-900">
+              <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-10 text-center">
+                <p className="text-sm font-medium text-zinc-950">
                   No systems found matching &quot;{searchQuery}&quot;
                 </p>
-                <p className="mt-1 text-xs text-slate-500 font-mono">
-                  Try searching for keywords like &quot;Next.js&quot;, &quot;Stripe&quot;, &quot;n8n&quot;, or &quot;Contract&quot;.
+                <p className="mt-1 text-xs text-zinc-500">
+                  Try &quot;Next.js&quot;, &quot;n8n&quot;, or &quot;Notion&quot;—or request a custom build above.
                 </p>
                 <button
+                  type="button"
                   onClick={() => {
                     setSearchQuery('');
                     setActiveCategory('all');
                   }}
-                  className="mt-4 rounded border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm hover:bg-slate-50"
+                  className="mt-4 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-medium text-zinc-700 hover:bg-zinc-50"
                 >
-                  Reset all filters
+                  Reset filters
                 </button>
               </div>
             )}
           </div>
         </section>
 
-        {/* Featured Master Suite Callout Banner */}
-        {bundleProduct && (
-          <section className="border-y border-slate-200 bg-slate-900 text-white py-12 sm:py-16">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <div className="inline-flex items-center gap-2 rounded border border-slate-700 bg-slate-800 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-300">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                      <span>FLAGSHIP ENTERPRISE ARSENAL · SAVE 50%</span>
-                    </div>
-                    <div className="inline-flex items-center gap-1 text-xs font-mono text-amber-400 bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700">
-                      <span>★ 4.5</span>
-                      <span className="text-slate-400">(47 Verified Reviews)</span>
-                    </div>
-                  </div>
-                  <h2 className="mt-3 font-sans text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                    Own the Entire 4-in-1 Founder & Developer Master Suite
-                  </h2>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
-                    Get NextLaunch AI™ ($49), ClientForge™ ($47), Notion Business OS™ ($49), and PromptForge AI™ ($47) 
-                    consolidated into one single institutional archive. $192 total value for a flat $99 one-time payment.
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2 text-xs font-mono text-slate-300">
-                    <span className="rounded bg-slate-800 px-2.5 py-1 border border-slate-700">✓ Full Source Code</span>
-                    <span className="rounded bg-slate-800 px-2.5 py-1 border border-slate-700">✓ 3 Word Contracts (.docx)</span>
-                    <span className="rounded bg-slate-800 px-2.5 py-1 border border-slate-700">✓ 5 Relational Databases</span>
-                    <span className="rounded bg-slate-800 px-2.5 py-1 border border-slate-700">✓ 525 Prompts Vault</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-3 shrink-0">
-                  <div className="text-left lg:text-right">
-                    <div className="flex items-baseline gap-2">
-                      <span className="font-sans text-3xl font-extrabold text-white">$99</span>
-                      <span className="font-mono text-xs text-slate-400">USD</span>
-                      <span className="text-sm text-slate-500 line-through">$192</span>
-                    </div>
-                    <div className="font-mono text-[11px] text-slate-400">Pay Once · Unlimited Projects Forever</div>
-                  </div>
-
-                  <a
-                    href={bundleProduct.gumroadUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-gumroad-single-product="true"
-                    className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-xs font-bold text-slate-900 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
-                  >
-                    <span>Instant Checkout ($99)</span>
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Verified Developer Testimonials & Social Proof */}
-        <TestimonialsSection />
-
-        {/* Engineering Standards */}
         <EngineeringStandards />
-
-        {/* FAQ Section */}
         <FAQSection />
       </main>
 
       <Footer onOpenLegal={setLegalModalType} />
 
-      {/* Technical Specs Modal */}
+      {/* Mobile Sticky Bottom Quick-Action Bar */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-30 border-t border-zinc-200 bg-white/95 backdrop-blur-md px-3 py-2.5 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+        <div className="flex items-center gap-2">
+          <a
+            href="mailto:notionmaster001@gmail.com?subject=Quick%20Project%20Inquiry"
+            className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-zinc-200 bg-zinc-50 px-3.5 py-2.5 text-xs font-medium text-zinc-800"
+          >
+            <Mail className="h-3.5 w-3.5 text-zinc-600" />
+            <span>Email</span>
+          </a>
+          <a
+            href="#hire"
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-4 py-2.5 text-xs font-medium text-white shadow-xs"
+          >
+            <span>Start $65 Starter Fix</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
+      </div>
+
       <ProductModal
         product={selectedProduct}
         onClose={() => setSelectedProduct(null)}
       />
 
-      {/* Live Interactive Preview Modal */}
       <LivePreviewModal
         product={selectedLivePreview}
         onClose={() => setSelectedLivePreview(null)}
         onOpenSpecs={setSelectedProduct}
       />
 
-      {/* Institutional Legal Modal */}
       <LegalModal
         type={legalModalType}
         onClose={() => setLegalModalType(null)}

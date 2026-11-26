@@ -106,14 +106,12 @@ export default function FreebiesPage() {
               </div>
 
               <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="font-mono text-xs uppercase font-bold text-slate-500">
+                <span className="font-mono text-xs uppercase font-medium text-zinc-500">
                   {product.categoryLabel}
                 </span>
-                <div className="flex items-center gap-1 text-amber-500 text-xs font-mono">
-                  <span>★</span>
-                  <span className="font-bold text-slate-800">{product.rating.toFixed(1)}</span>
-                  <span className="text-slate-400">({product.reviewsCount})</span>
-                </div>
+                <span className="rounded-md bg-zinc-100 px-2 py-0.5 font-mono text-[10px] text-zinc-600 border border-zinc-200">
+                  {product.version.split('(')[0].trim()}
+                </span>
               </div>
 
               <h2 className="text-xl font-bold text-slate-900 mb-2">
@@ -157,53 +155,38 @@ export default function FreebiesPage() {
           ))}
         </div>
 
-        {/* Flagship Upgrade Banner */}
-        {featuredFlagship && (
-          <div className="rounded-2xl border-2 border-slate-900 bg-slate-900 text-white p-8 sm:p-12 shadow-xl">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-8">
-                <span className="inline-flex items-center gap-1.5 rounded bg-pink-500/20 border border-pink-500/40 px-2.5 py-1 font-mono text-xs font-bold text-pink-300 mb-4">
-                  <span>★</span>
-                  <span>Ready to Launch a Commercial AI Business?</span>
-                </span>
-                <h3 className="text-2xl sm:text-4xl font-black tracking-tight text-white mb-3">
-                  {featuredFlagship.name}
-                </h3>
-                <p className="font-mono text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-                  {featuredFlagship.tagline}
-                </p>
-                <div className="mt-6 flex flex-wrap items-baseline gap-3">
-                  <span className="text-3xl font-black text-pink-400">
-                    {featuredFlagship.discountPrice}
-                  </span>
-                  <span className="font-mono text-xs text-slate-400 line-through">
-                    {featuredFlagship.formattedPrice}
-                  </span>
-                  <span className="rounded bg-pink-500/30 border border-pink-500/50 px-2 py-0.5 font-mono text-xs font-bold text-pink-300">
-                    20% OFF with LAUNCH20
-                  </span>
-                </div>
-              </div>
-              <div className="lg:col-span-4 flex flex-col gap-3">
-                <a
-                  href={featuredFlagship.gumroadUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-gumroad-single-product="true"
-                  className="gumroad-button flex w-full items-center justify-center gap-2 rounded-lg bg-pink-600 py-4 px-6 font-mono text-xs font-bold text-white shadow-lg hover:bg-pink-500 transition"
-                >
-                  <span>Instant Checkout ({featuredFlagship.discountPrice})</span>
-                  <span>→</span>
-                </a>
-                <Link
-                  href={`/product/${featuredFlagship.id}`}
-                  className="text-center font-mono text-xs text-slate-400 hover:text-white transition py-2"
-                >
-                  Inspect Full Code Architecture ›
-                </Link>
-              </div>
+        {/* Custom Integration Upgrade Banner */}
+        <div className="rounded-2xl border border-zinc-900 bg-zinc-950 text-white p-8 sm:p-12 shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-zinc-800 border border-zinc-700 px-3 py-1 font-mono text-[11px] font-medium text-zinc-200 mb-4">
+                <span>CUSTOM ENGINEERING</span>
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-3">
+                Want any of these workflows wired into your stack?
+              </h3>
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-2xl">
+                Skip manual configuration. We connect n8n automations, Gumroad/Stripe webhooks, Notion databases, and custom APIs directly into your live business tools within 48 hours to 5 days.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-3">
+              <Link
+                href="/#hire"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3.5 px-6 text-xs font-semibold text-zinc-950 shadow-sm hover:bg-zinc-100 transition"
+              >
+                <span>Start a $65 Starter Fix →</span>
+              </Link>
+              <Link
+                href="/services"
+                className="text-center font-mono text-xs text-zinc-400 hover:text-white transition py-2"
+              >
+                View All Service Scopes &amp; Pricing ›
+              </Link>
             </div>
           </div>
+        </div>
+        {false && featuredFlagship && (
+          <div className="hidden" />
         )}
       </main>
 

@@ -43,7 +43,7 @@ export const LivePreviewModal: React.FC<LivePreviewModalProps> = ({
                 </span>
               </div>
               <p className="font-mono text-[11px] text-slate-500">
-                System #{product.num} · ★ {product.rating.toFixed(1)} ({product.reviewsCount} reviews) · {product.version} · {product.categoryLabel}
+                System #{product.num} · {product.version} · {product.categoryLabel}
               </p>
             </div>
           </div>
