@@ -49,6 +49,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </a>
 
               <Link
+                href="/store"
+                className="rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-50 transition"
+              >
+                Products Store
+              </Link>
+
+              <Link
                 href="/services"
                 className="rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-50 transition"
               >

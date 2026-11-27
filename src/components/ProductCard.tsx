@@ -120,7 +120,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenDetails
               href={`/product/${product.id}`}
               className="rounded-md sm:rounded-lg bg-zinc-950 hover:bg-zinc-800 text-white px-2 py-1 sm:px-2.5 sm:py-1.5 text-[10px] sm:text-[11px] font-medium transition inline-flex items-center gap-1 whitespace-nowrap"
             >
-              <span>{product.price === 0 ? 'Free' : 'View'}</span>
+              <span>{product.price === 0 ? 'Free' : 'Buy'}</span>
               <ArrowRight className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
             </Link>
           </div>

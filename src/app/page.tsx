@@ -1,59 +1,23 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Mail, Sparkles } from 'lucide-react';
+import { ArrowRight, Mail, ShoppingBag } from 'lucide-react';
 import { Header } from '../components/Header';
 import { ServicesSection } from '../components/ServicesSection';
 import { VerifiedWorkSection } from '../components/VerifiedWorkSection';
 import { InquirySection } from '../components/InquirySection';
-import { CategoryFilters } from '../components/CategoryFilters';
-import { ProductCard } from '../components/ProductCard';
-import { ProductModal } from '../components/ProductModal';
-import { LivePreviewModal } from '../components/LivePreviewModal';
+import { StoreCatalog } from '../components/StoreCatalog';
 import { LegalModal } from '../components/LegalModal';
 import { EngineeringStandards } from '../components/EngineeringStandards';
 import { FAQSection } from '../components/FAQSection';
 import { Footer } from '../components/Footer';
 import { PRODUCTS } from '../data/products';
-import { Product, CategoryFilter, LegalDocType } from '../types';
+import { LegalDocType } from '../types';
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState<CategoryFilter>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [selectedLivePreview, setSelectedLivePreview] = useState<Product | null>(null);
   const [legalModalType, setLegalModalType] = useState<LegalDocType | null>(null);
   const [selectedTier, setSelectedTier] = useState<string>('Full Custom System Setup ($175)');
-
-  const counts = useMemo(() => {
-    return {
-      all: PRODUCTS.length,
-      saas: PRODUCTS.filter((p) => p.category === 'saas').length,
-      automation: PRODUCTS.filter((p) => p.category === 'automation').length,
-      agency: PRODUCTS.filter((p) => p.category === 'agency').length,
-      growth: PRODUCTS.filter((p) => p.category === 'growth').length,
-      bundle: PRODUCTS.filter((p) => p.category === 'bundle').length,
-      gaming: 0,
-    };
-  }, []);
-
-  const filteredProducts = useMemo(() => {
-    return PRODUCTS.filter((product) => {
-      if (activeCategory !== 'all' && product.category !== activeCategory) {
-        return false;
-      }
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase();
-        const inName = product.name.toLowerCase().includes(q);
-        const inTagline = product.tagline.toLowerCase().includes(q);
-        const inTech = product.techStack.some((t) => t.toLowerCase().includes(q));
-        const inDeliverables = product.deliverables.some((d) => d.toLowerCase().includes(q));
-        return inName || inTagline || inTech || inDeliverables;
-      }
-      return true;
-    });
-  }, [activeCategory, searchQuery]);
 
   const jsonLdOrg = {
     '@context': 'https://schema.org',
@@ -107,7 +71,7 @@ export default function Home() {
                 We help agencies, clinics, founders, and solo operators replace repetitive manual work with reliable Notion workspaces, API-to-Airtable pipelines, and fast web tools—delivered with full source ownership.
               </p>
 
-              {/* Full-width Crisp Mobile CTAs, Inline on Desktop */}
+              {/* Full-width Crisp Mobile CTAs + Direct Products Store Button */}
               <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3">
                 <a
                   href="#hire"
@@ -118,18 +82,19 @@ export default function Home() {
                 </a>
 
                 <div className="grid grid-cols-2 sm:flex items-center gap-2.5 sm:gap-3">
-                  <a
-                    href="#services"
-                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium text-zinc-800 transition hover:bg-zinc-50"
+                  <Link
+                    href="/store"
+                    className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-zinc-900/15 bg-zinc-100 px-3.5 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-semibold text-zinc-950 transition hover:bg-zinc-200/80 whitespace-nowrap"
                   >
-                    View Scopes
-                  </a>
+                    <ShoppingBag className="h-3.5 w-3.5 text-zinc-800" />
+                    <span>Products Store ({PRODUCTS.length})</span>
+                  </Link>
 
                   <a
-                    href="#catalog"
-                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 sm:border-transparent bg-zinc-50 sm:bg-transparent px-3 py-2.5 sm:py-2 text-xs font-medium text-zinc-600 hover:text-zinc-950 transition"
+                    href="#services"
+                    className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-3.5 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium text-zinc-800 transition hover:bg-zinc-50 whitespace-nowrap"
                   >
-                    {PRODUCTS.length} Ready Kits ↓
+                    View Scopes
                   </a>
                 </div>
               </div>
@@ -150,7 +115,7 @@ export default function Home() {
                   {PRODUCTS.length} Systems
                 </div>
                 <div className="mt-0.5 text-[11px] sm:text-xs text-zinc-500">
-                  Architectures ready to adapt
+                  Available in Products Store
                 </div>
               </div>
               <div>
@@ -178,72 +143,13 @@ export default function Home() {
         <InquirySection preselectedTier={selectedTier} />
 
         {/* Pre-Built Toolkits Store: 2 Cards Per Row on Mobile, 3 on Tablet, 4 Compact on Desktop */}
-        <section id="catalog" className="bg-white py-12 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-              <div className="max-w-2xl">
-                <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[10px] sm:text-[11px] font-medium tracking-wide text-zinc-600">
-                  <Code2 className="h-3.5 w-3.5 text-zinc-900" />
-                  <span>SELF-SERVE TOOLKITS &amp; BLUEPRINTS</span>
-                </div>
-                <h2 className="mt-3 sm:mt-4 text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
-                  Ready-to-Deploy Toolkits &amp; Free Utilities
-                </h2>
-                <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-zinc-600">
-                  Grab any self-serve boilerplate or free blueprint below, or hire us to integrate it directly into your stack.
-                </p>
-              </div>
-
-              <Link
-                href="/freebies"
-                className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-medium text-zinc-800 hover:bg-zinc-100 transition"
-              >
-                <Sparkles className="h-3.5 w-3.5 text-zinc-600" />
-                <span>Explore Free Tools ($0) →</span>
-              </Link>
-            </div>
-
-            <CategoryFilters
-              activeCategory={activeCategory}
-              onSelectCategory={setActiveCategory}
-              searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
-              counts={counts}
-            />
-
-            {filteredProducts.length > 0 ? (
-              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
-                {filteredProducts.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    onOpenDetails={setSelectedProduct}
-                    onOpenLivePreview={setSelectedLivePreview}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-10 text-center">
-                <p className="text-sm font-medium text-zinc-950">
-                  No systems found matching &quot;{searchQuery}&quot;
-                </p>
-                <p className="mt-1 text-xs text-zinc-500">
-                  Try &quot;Next.js&quot;, &quot;n8n&quot;, or &quot;Notion&quot;—or request a custom build above.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSearchQuery('');
-                    setActiveCategory('all');
-                  }}
-                  className="mt-4 rounded-lg border border-zinc-300 bg-white px-3.5 py-2 text-xs font-medium text-zinc-700 hover:bg-zinc-50"
-                >
-                  Reset filters
-                </button>
-              </div>
-            )}
-          </div>
-        </section>
+        <StoreCatalog
+          id="catalog"
+          headingAs="h2"
+          eyebrow="PRODUCTS STORE & SELF-SERVE TOOLKITS"
+          title="Ready-to-Deploy Toolkits & Free Utilities"
+          subtitle="Grab any self-serve boilerplate or free blueprint below, or hire us to integrate it directly into your stack."
+        />
 
         <EngineeringStandards />
         <FAQSection />
@@ -256,31 +162,27 @@ export default function Home() {
         <div className="flex items-center gap-2">
           <a
             href="mailto:notionmaster001@gmail.com?subject=Quick%20Project%20Inquiry"
-            className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-zinc-200 bg-zinc-50 px-3.5 py-2.5 text-xs font-medium text-zinc-800"
+            className="inline-flex items-center justify-center gap-1 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-xs font-medium text-zinc-800"
           >
             <Mail className="h-3.5 w-3.5 text-zinc-600" />
             <span>Email</span>
           </a>
+          <Link
+            href="/store"
+            className="inline-flex items-center justify-center gap-1 rounded-xl border border-zinc-200 bg-zinc-100 px-3 py-2.5 text-xs font-semibold text-zinc-900"
+          >
+            <ShoppingBag className="h-3.5 w-3.5 text-zinc-700" />
+            <span>Store</span>
+          </Link>
           <a
             href="#hire"
-            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-4 py-2.5 text-xs font-medium text-white shadow-xs"
+            className="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-zinc-950 px-3 py-2.5 text-xs font-medium text-white shadow-xs whitespace-nowrap"
           >
-            <span>Start $65 Starter Fix</span>
+            <span>$65 Fix</span>
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
         </div>
       </div>
-
-      <ProductModal
-        product={selectedProduct}
-        onClose={() => setSelectedProduct(null)}
-      />
-
-      <LivePreviewModal
-        product={selectedLivePreview}
-        onClose={() => setSelectedLivePreview(null)}
-        onOpenSpecs={setSelectedProduct}
-      />
 
       <LegalModal
         type={legalModalType}
