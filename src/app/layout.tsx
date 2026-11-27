@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Notion Master Studio — Commercial Digital Assets",
-    description: "Production-grade software boilerplates and operational toolkits.",
+    title: "Notion Master Studio — Custom Notion Systems, n8n Automations & Web Engineering",
+    description: "Productized Notion workspaces, n8n workflow automations, API integrations, and Next.js web builds.",
     url: "https://notion-master-showcase-two.vercel.app",
     siteName: "Notion Master Studio",
     locale: "en_US",
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
         url: "https://notion-master-showcase-two.vercel.app/products/26-ai-saas-pro.jpg",
         width: 1200,
         height: 630,
-        alt: "Notion Master Studio — Institutional Software Boilerplates",
+        alt: "Notion Master Studio — Custom Notion Systems & n8n Automations",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Notion Master Studio — Commercial Digital Assets",
-    description: "Production-grade Next.js 16 boilerplates, n8n automation blueprints, and developer toolkits.",
+    title: "Notion Master Studio — Custom Notion Systems & n8n Automations",
+    description: "Productized Notion workspaces, n8n workflow automations, API integrations, and Next.js starter toolkits.",
     images: ["https://notion-master-showcase-two.vercel.app/products/26-ai-saas-pro.jpg"],
   },
   verification: {

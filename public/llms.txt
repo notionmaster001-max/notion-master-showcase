@@ -1,12 +1,20 @@
-# Notion Master Studio — Digital Assets & Software Boilerplates
+# Notion Master Studio — Custom Systems, n8n Automations & Products Store
 
-> Production-grade Next.js 16 boilerplates, n8n AI automation blueprints, Chrome MV3 extensions, and institutional digital kits.
+> Custom Notion operating systems, n8n AI automation workflows, API integrations, Next.js web builds, and digital developer toolkits.
 
 Website: https://notion-master-showcase-two.vercel.app
-Gumroad Store: https://notionmaster001.gumroad.com
-Free Developer Hub: https://notion-master-showcase-two.vercel.app/freebies
+Services & Pricing ($65 / $175 / $350): https://notion-master-showcase-two.vercel.app/services
+Products Store: https://notion-master-showcase-two.vercel.app/store
+Free Developer Hub ($0): https://notion-master-showcase-two.vercel.app/freebies
 AI Cost Calculator: https://notion-master-showcase-two.vercel.app/calculator
 Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
+Direct Inquiry Email: notionmaster001@gmail.com
+Gumroad Storefront: https://notionmaster001.gumroad.com
+
+## Custom Engineering Services
+- Starter Audit & Workflow Fix ($65 fixed, 48h turnaround): Debug 1 broken n8n/Zapier webhook, single API sync, or Notion formula fix.
+- Full Custom System Setup ($175 fixed, 3-5 days): Custom Notion Business OS / CRM, multi-step n8n + AI workflow, or Next.js Vercel landing page.
+- Ongoing Automation Partner ($350/mo): Continuous workflow monitoring, up to 4 new n8n/Notion builds per month, rate-limit optimization.
 
 ## Key Engineering Guides
 - Multi-Provider Failover AI SaaS in Next.js 16: https://notion-master-showcase-two.vercel.app/guides/nextjs-16-multi-provider-ai-saas
@@ -20,7 +28,7 @@ Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 - Tagline: 100% Offline AI Coding Cost & Token Waste Auditor for Claude Code, Cursor, OpenAI & DeepSeek
 - URL: https://notion-master-showcase-two.vercel.app/product/tokenaudit-kit
 
-### TokenAudit Lite™ ($0 (FREE))
+### TokenAudit Lite™ (Free CLI) ($0 FREE)
 - Category: Developer Tools
 - Tagline: Zero-Dependency Local Node.js CLI to Audit Claude Code & Cursor Token Spend
 - URL: https://notion-master-showcase-two.vercel.app/product/tokenaudit-lite
@@ -30,7 +38,7 @@ Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 - Tagline: Next.js 16 + React 19 Flagship Multi-Provider AI SaaS Boilerplate with Stripe Credits Ledger
 - URL: https://notion-master-showcase-two.vercel.app/product/ai-saas-pro
 
-### AgentForge n8n v2™ ($0 (FREE))
+### AgentForge n8n v2™ ($0 FREE)
 - Category: AI Workflows
 - Tagline: 10 Production Claude + Supabase AI Automation Workflows for n8n
 - URL: https://notion-master-showcase-two.vercel.app/product/agentforge-n8n-v2
@@ -50,25 +58,20 @@ Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 - Tagline: TypeScript Remote MCP Server on Cloudflare Workers with OAuth2 PKCE
 - URL: https://notion-master-showcase-two.vercel.app/product/remotemcp-pro-cloudflare
 
-### OpenAPI-to-MCP Forge Pro™ ($0 (FREE))
+### OpenAPI-to-MCP Forge Pro™ ($0 FREE)
 - Category: Developer Tools
 - Tagline: Production Compiler Engine: Convert Any REST API into FastMCP Python Servers
 - URL: https://notion-master-showcase-two.vercel.app/product/openapi-to-mcp-forge
 
-### CLAUDE.md Master Kit™ ($0 (FREE))
+### CLAUDE.md Master Kit™ ($0 FREE)
 - Category: AI & Terminal
 - Tagline: 20 Production Architecture Blueprints for Anthropic Claude Code Agent
 - URL: https://notion-master-showcase-two.vercel.app/product/claude-md-master-kit
 
-### CursorForge Pro™ ($0 (FREE))
+### CursorForge Pro™ ($0 FREE)
 - Category: Developer Tools
 - Tagline: 50+ Production AI Coding Rules for Next.js 15, Supabase, Tailwind v4 & Cursor IDE
 - URL: https://notion-master-showcase-two.vercel.app/product/cursorforge-pro-rules
-
-### Vice City Master Vault™ (5-in-1 Suite) ($49)
-- Category: Flagship Bundle
-- Tagline: The Complete Day-1 Launch Arsenal for Gamers & Streamers
-- URL: https://notion-master-showcase-two.vercel.app/product/vice-city-master-vault
 
 ### The Founder & Developer Master Suite (4-in-1) ($99)
 - Category: Flagship Bundle
@@ -114,31 +117,6 @@ Engineering Guides: https://notion-master-showcase-two.vercel.app/guides
 - Category: Full-Stack SaaS
 - Tagline: Multi-Model AI Router & Token Credit Studio (Next.js 15, Gemini, Claude, GPT-4o, DeepSeek)
 - URL: https://notion-master-showcase-two.vercel.app/product/multilaunch-ai
-
-### ChatHeist Live™ ($28)
-- Category: Interactive Overlay
-- Tagline: Interactive Twitch & Kick Chat Bank Heist Minigame Overlay Engine
-- URL: https://notion-master-showcase-two.vercel.app/product/chatheist-live
-
-### ConsoleStream Pro™ ($20)
-- Category: Hardware & Calibration
-- Tagline: PS5 & Xbox Capture Card Audio Desync Calibrator & HDR Color Fix for OBS
-- URL: https://notion-master-showcase-two.vercel.app/product/consolestream-pro
-
-### ViceStream Neon Studio™ ($20)
-- Category: OBS Studio Suite
-- Tagline: Hardware-Accelerated 1080p Cyber Neon OBS Broadcast Overlays & Scenes
-- URL: https://notion-master-showcase-two.vercel.app/product/vicestream-neon-studio
-
-### StreamShield Vice™ ($25)
-- Category: Audio & Streaming
-- Tagline: 100% DMCA-Safe Soundboard Engine & Twitch VOD Audio Splitter
-- URL: https://notion-master-showcase-two.vercel.app/product/streamshield-vice
-
-### Vice City 100% Master Companion™ ($15)
-- Category: Gaming & OS
-- Tagline: Dual-Screen Interactive 100% Quest & Collectibles OS (2026 Edition)
-- URL: https://notion-master-showcase-two.vercel.app/product/vice-city-companion
 
 ### Notion Business OS™ ($49)
 - Category: Operations

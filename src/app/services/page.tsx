@@ -1,47 +1,83 @@
-'use client';
-
-import React, { useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import React from 'react';
+import { Metadata } from 'next';
 import { Header } from '../../components/Header';
-import { ServicesSection } from '../../components/ServicesSection';
-import { VerifiedWorkSection } from '../../components/VerifiedWorkSection';
-import { InquirySection } from '../../components/InquirySection';
-import { FAQSection } from '../../components/FAQSection';
+import { ServicesClient } from '../../components/ServicesClient';
 import { Footer } from '../../components/Footer';
 
+export const metadata: Metadata = {
+  title: 'Custom Notion CRM, n8n Workflows & Automation Services — Notion Master Studio',
+  description:
+    'Fixed-scope Notion Business OS setups ($175), n8n webhook & API workflow fixes ($65), Zapier-to-n8n migrations, and monthly automation retainers ($350/mo).',
+  keywords: [
+    'hire n8n developer',
+    'custom notion crm setup',
+    'zapier to n8n migration service',
+    'n8n webhook fix',
+    'notion workspace consultant',
+    'ai workflow automation service',
+  ],
+  alternates: {
+    canonical: 'https://notion-master-showcase-two.vercel.app/services',
+  },
+  openGraph: {
+    title: 'Custom Notion Systems & n8n Automation Services — Notion Master Studio',
+    description:
+      'Fixed-scope builds starting at $65 Starter Fix (48h) and $175 Custom System Setup.',
+    url: 'https://notion-master-showcase-two.vercel.app/services',
+    siteName: 'Notion Master Studio',
+    type: 'website',
+  },
+};
+
 export default function ServicesPage() {
-  const [selectedTier, setSelectedTier] = useState<string>('Full Custom System Setup ($175)');
+  const jsonLdService = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Notion Systems & n8n Workflow Engineering Services',
+    serviceType: 'Workflow Automation & Custom Workspace Development',
+    provider: {
+      '@type': 'ProfessionalService',
+      name: 'Notion Master Studio',
+      url: 'https://notion-master-showcase-two.vercel.app',
+      email: 'notionmaster001@gmail.com',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Productized Automation Packages',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          name: 'Starter Audit & Workflow Fix',
+          price: '65',
+          priceCurrency: 'USD',
+          url: 'https://notion-master-showcase-two.vercel.app/services',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Full Custom System Setup',
+          price: '175',
+          priceCurrency: 'USD',
+          url: 'https://notion-master-showcase-two.vercel.app/services',
+        },
+        {
+          '@type': 'Offer',
+          name: 'Ongoing Automation Partner',
+          price: '350',
+          priceCurrency: 'USD',
+          url: 'https://notion-master-showcase-two.vercel.app/services',
+        },
+      ],
+    },
+  };
 
   return (
     <div className="min-h-screen bg-white text-zinc-950">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }}
+      />
       <Header />
-
-      <main>
-        <div className="border-b border-zinc-200 bg-white py-10 sm:py-12">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-500 hover:text-zinc-950 transition"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              <span>Back to Studio Home</span>
-            </Link>
-            <h1 className="mt-4 text-3xl font-semibold tracking-tight text-zinc-950 sm:text-4xl">
-              Custom Automation &amp; Systems Services
-            </h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-600">
-              Clear, fixed-price engineering scopes for Notion operating systems, n8n workflows, API pipelines, and Next.js deployments.
-            </p>
-          </div>
-        </div>
-
-        <ServicesSection onSelectTier={setSelectedTier} />
-        <VerifiedWorkSection />
-        <InquirySection preselectedTier={selectedTier} />
-        <FAQSection />
-      </main>
-
+      <ServicesClient />
       <Footer />
     </div>
   );
